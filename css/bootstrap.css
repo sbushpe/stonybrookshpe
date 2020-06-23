@@ -4344,7 +4344,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .navbar .container,
@@ -4362,9 +4362,10 @@ input[type="button"].btn-block {
 .navbar-brand {
   display: inline-block;
   padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-bottom: 0.69rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  margin-left: 0.34rem;
+  font-size: 1.6rem;
   line-height: inherit;
   white-space: nowrap;
 }
