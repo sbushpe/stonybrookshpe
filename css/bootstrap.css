@@ -1160,6 +1160,7 @@ pre code {
     -ms-flex: 0 0 58.333333%;
     flex: 0 0 58.333333%;
     max-width: 58.333333%;
+    padding-bottom: 1.25rem;
   }
   .col-md-8 {
     -ms-flex: 0 0 66.666667%;
@@ -4344,7 +4345,7 @@ input[type="button"].btn-block {
   align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 0.7rem;
 }
 
 .navbar .container,
