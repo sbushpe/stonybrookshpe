@@ -30,6 +30,7 @@ body {
 .carousel-item > img {
   position: center;
   /* min-width: 100%; */
+  opacity: 0.4;
   margin: auto; 
   display: block;
   height: 32rem;
