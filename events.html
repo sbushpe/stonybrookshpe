@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Stony Brook SHPE</title>
+
+    <link rel="icon" href="media/icon.PNG">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+</head>
+
+<body>
+    <header style="position: relative;">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a href="index.html">
+                <img alt="SHPE logo" src="media/SHPE-logo-2.png" width="200" height="65">
+            </a>
+            <a class="navbar-brand" href="https://www.stonybrook.edu/">Stony Brook University</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sponsor-us.html">Sponsor Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- <br><br> -->
+    
+    <main role="main">
+        <div style="margin-top: 50px; text-align: center;">
+            <iframe
+                id='frame-events'
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&title=SHPE%20Events"
+                style="border:solid 0px #777;">
+            </iframe>
+        </div>
+    </main>
+    <script>
+        window.onload = () => {
+            const WIDTH_OFFSET = 50;
+            const HEIGHT_OFFSET = 146;
+            let frameEvent = document.getElementById('frame-events');
+            frameEvent.setAttribute('width', window.innerWidth-WIDTH_OFFSET);
+            frameEvent.setAttribute('height', (window.innerHeight-HEIGHT_OFFSET));
+
+            window.addEventListener('resize', () => {
+                frameEvent.setAttribute('width', window.innerWidth-WIDTH_OFFSET);
+                frameEvent.setAttribute('height', (window.innerHeight-HEIGHT_OFFSET));
+            });
+        };
+    </script>
+</body>
+
+</html>
