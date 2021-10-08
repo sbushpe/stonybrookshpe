@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -35,7 +36,7 @@
 </head>
 
 <body>
-    <header style="position: relative;">
+    <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a href="index.html">
                 <img alt="SHPE logo" src="media/SHPE-logo-2.png" width="200" height="65">
@@ -68,11 +69,10 @@
     </header>
 
     <!-- <br><br> -->
-    
+
     <main role="main">
         <div style="margin-top: 50px; text-align: center;">
-            <iframe
-                id='frame-events'
+            <iframe id='frame-events'
                 src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&title=SHPE%20Events"
                 style="border:solid 0px #777;">
             </iframe>
@@ -83,12 +83,12 @@
             const WIDTH_OFFSET = 50;
             const HEIGHT_OFFSET = 146;
             let frameEvent = document.getElementById('frame-events');
-            frameEvent.setAttribute('width', window.innerWidth-WIDTH_OFFSET);
-            frameEvent.setAttribute('height', (window.innerHeight-HEIGHT_OFFSET));
+            frameEvent.setAttribute('width', window.innerWidth - WIDTH_OFFSET);
+            frameEvent.setAttribute('height', (window.innerHeight - HEIGHT_OFFSET));
 
             window.addEventListener('resize', () => {
-                frameEvent.setAttribute('width', window.innerWidth-WIDTH_OFFSET);
-                frameEvent.setAttribute('height', (window.innerHeight-HEIGHT_OFFSET));
+                frameEvent.setAttribute('width', window.innerWidth - WIDTH_OFFSET);
+                frameEvent.setAttribute('height', (window.innerHeight - HEIGHT_OFFSET));
             });
         };
     </script>
