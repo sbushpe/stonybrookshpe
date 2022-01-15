@@ -5,3 +5,7 @@ function showChapterBylaws() {
 function showNationalSHPEsite() {
   open("https://www.shpe.org/")
 }
+
+function showMembershipPage() {
+  open("https://www.shpe.org/membership")
+}
