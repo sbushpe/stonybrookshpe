@@ -10,15 +10,13 @@ function showMembershipPage() {
   open("https://www.shpe.org/membership")
 }
 
-let geurisClickCount = 0;
+let showOriginalGeuris = false;
 function onClickGeuris() {
   let elemImg = document.getElementById('img_geuris')
-  geurisClickCount++
-  if (geurisClickCount >= 10 && geurisClickCount <= 15) {
+  showOriginalGeuris = !showOriginalGeuris;
+  if (showOriginalGeuris) {
     elemImg.src = './media/eboard-members/geuris.png'
-  }
-  if (geurisClickCount >= 15) {
+  } else {
     elemImg.src = './media/eboard-members/geuris-german.png'
-    geurisClickCount = 0
   }
 }
