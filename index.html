@@ -9,13 +9,13 @@
   <meta name="generator" content="Jekyll v4.0.1">
   <title>Stony Brook SHPE</title>
 
-  <link rel="icon" href="media/icon.PNG">
+  <link rel="icon" href="media/icon.png">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
   <!-- Maybe we should move to react... -->
-  <script src="js/index.js"></script>
+  <script type="module" src="js/index.js"></script>
 
   <style>
     .bd-placeholder-img {
@@ -41,7 +41,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a href="index.html">
-        <img alt="SHPE logo" src="media/SHPE-logo-2.png" width="200" height="65">
+        <img alt="SHPE logo" src="media/shpe-logo2.png" width="200" height="65">
       </a>
       <a class="navbar-brand" href="https://www.stonybrook.edu/">Stony Brook University</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -71,7 +71,6 @@
   </header>
 
   <main role="main">
-
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -80,7 +79,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img alt="RLDC-2020" src="media/RLDC-2020_2048.JPG">
+          <img alt="RLDC-2020" src="media/events/rldc-2020.jpg">
           <div class="container">
             <div class="carousel-caption text-left">
               <h1><b>Familia</b></h1>
@@ -90,7 +89,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img alt="Group-Photo-2020" src="media/Group-photo.png">
+          <img alt="Group-Photo-2020" src="media/events/group-photo.png">
           <div class="container">
             <div class="carousel-caption">
               <h1><b>Service</b></h1>
@@ -100,7 +99,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img alt="Noche_De_Ciencias_2016" src="media/Noche_De_Ciencias_2016.jpg">
+          <img alt="Noche_De_Ciencias_2016" src="media/events/noche-de-ciencias-2016.jpg">
           <div class="container">
             <div class="carousel-caption text-right">
               <h1><b>Resilience</b></h1>
@@ -131,47 +130,9 @@
           <h2 class="featurette-heading">Meet the<span class="text-muted"> Executive Board.</span></h2>
         </div>
         <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="media/eboard-members/kevin-cruz.png" width="140" height="140">
-            <h2>President</h2>
-            <h3>Kevin Cruz</h3>
-          </div>
-          <div class="col-lg-4">
-            <img src="media/eboard-members/camilo.png" width="140" height="140">
-            <h2>Vice President</h2>
-            <h3>Camilo Arias</h3>
-          </div>
-          <div class="col-lg-4">
-            <img id="img_geuris" src="media/eboard-members/saadat-islam.png" width="140" height="140" onclick="onClickGeuris()">
-            <h2>Treasurer</h2>
-            <h3>Saadat Islam</h3>
-          </div>
-          <div class="col-lg-4">
-            <img src="media/eboard-members/adriana.png" width="140" height="140">
-            <h2>Secretary</h2>
-            <h3>Adriana Salomon</h3>
-          </div>
-          <div class='col-lg-4'>
-            <img src='media/eboard-members/michael-c.png' width='140' height='140'>
-            <h2>Web Developer</h2>
-            <h3>Michael Campos</h3>
-          </div>
-          <div class="col-lg-4">
-            <img src="media/eboard-members/josias.png" width="140" height="140">
-            <h2>Graphic Designer</h2>
-            <h3>Josias</h3>
-          </div>
-          <div class="col-lg-4">
-            <img src="media/eboard-members/Steven_Luc_Huynh.png" width="140" height="140">
-            <h2>Graphic Designer</h2>
-            <h3>Steven Luc Huynh</h3>
-          </div>
-        </div>
-
+        <div id="eboard-members" class="row"></div>
 
         <!-- START THE FEATURETTES -->
-
         <hr class="featurette-divider">
 
         <div class="row featurette">
@@ -185,7 +146,7 @@
             </p>
           </div>
           <div class="col-md-5">
-            <img alt="History" src="media/involvement-fair.jpg" width="400" height="500">
+            <img alt="History" src="media/events/involvement-fair.jpg" width="400" height="500">
           </div>
         </div>
 
@@ -218,7 +179,7 @@
             </p>
           </div>
           <div class="col-md-5">
-            <img alt="History" src="media/history.png" width="400" height="500">
+            <img alt="History" src="media/lore/history.png" width="400" height="500">
           </div>
         </div>
 
@@ -247,6 +208,5 @@
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="js/bootstrap.bundle.js"></script>
-</body>
-
+  </body>
 </html>
