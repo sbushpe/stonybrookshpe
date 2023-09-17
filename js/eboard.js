@@ -9,34 +9,35 @@ const Position = {
 
 export const eboardMembers = [
 	{
-		src: "kevin-cruz.png",
+		src: "josiasbeingprofessional.png",
 		title: Position.PRESIDENT,
 		name: "Josias Gonzalez",
+		email: "josias.gonzalez@stonybrook.edu",
+	},
+	{
+		src: "Kevin.jpg",
+		title: Position.VICE_PRESIDENT,
+		name: "Kevin Cruz",
 		email: "kevin.cruz@stonybrook.edu",
 	},
 	{
-		src: "jender.png",
-		title: Position.VICE_PRESIDENT,
-		name: "Jender Baldera",
-		email: "jender.baldera@stonybrook.edu",
-	},
-	{
-		src: "saadat-islam.png",
+		src: "oscar.jpeg",
 		title: Position.TREASURER,
-		name: "Saadat Islam",
-		email: "saadat.islam@stonybrook.edu",
+		name: "Oscar Berrios",
+		email: "oscar.berrios@stonybrook.edu",
 	},
 	{
-		src: "adriana.png",
+		src: "jeremy.jpg",
 		title: Position.SECRETARY,
-		name: "Adriana Salomon",
-		email: "adriana.salomoncampodonico@stonybrook.edu",
+		name: "Jeremy Galindo",
+		email: "Jeremy.Galindo@stonybrook.edu",
 	},
 	{
-		src: "michael-c.png",
+		src: "alam.jpg",
 		title: Position.WEB_MASTER,
-		name: "Michael Campos",
+		name: "Alam Zishan",
 	},
+	/*
 	{
 		src: "josias.png",
 		title: Position.GRAPHIC_DESIGNER,
@@ -47,4 +48,5 @@ export const eboardMembers = [
 		title: Position.GRAPHIC_DESIGNER,
 		name: "Steven Luc Huynh",
 	},
+	*/
 ];
