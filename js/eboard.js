@@ -47,12 +47,12 @@ export const eboardMembers = [
 	},
 	
 	{
-		src: "nicole.mena.jpg",
+		src: "Nicole.Mena.jpg",
 		title: Position.PR_CHAIR,
 		name: "Nicole Mena",
 	},
 	{
-		src:"eduardo.jpg",
+		src:"Eduardo.jpg",
 		title: Position.EVENT_COORDINATOR,
 		name: "Eduardo Lozano"
 	}
