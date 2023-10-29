@@ -5,6 +5,8 @@ const Position = {
 	SECRETARY: "Secretary",
 	WEB_MASTER: "Web Master",
 	GRAPHIC_DESIGNER: "Graphic Designer",
+	PR_CHAIR: "PR Chair",
+	EVENT_COORDINATOR: "Event Coordinator",
 };
 
 export const eboardMembers = [
@@ -37,16 +39,22 @@ export const eboardMembers = [
 		title: Position.WEB_MASTER,
 		name: "Alam Zishan",
 	},
-	/*
+	
 	{
-		src: "josias.png",
+		src: "camilo.JPG",
 		title: Position.GRAPHIC_DESIGNER,
-		name: "Josias",
+		name: "Camilo Arias",
+	},
+	
+	{
+		src: "nicole.mena.jpg",
+		title: Position.PR_CHAIR,
+		name: "Nicole Mena",
 	},
 	{
-		src: "steven-luc-huynh.png",
-		title: Position.GRAPHIC_DESIGNER,
-		name: "Steven Luc Huynh",
-	},
-	*/
+		src:"eduardo.jpg",
+		title: Position.EVENT_COORDINATOR,
+		name: "Eduardo Lozano"
+	}
+	
 ];
