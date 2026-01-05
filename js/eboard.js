@@ -35,9 +35,9 @@ export const eboardMembers = [
 		email: "adrian.m.rodriguez@stonybrook.edu",
 	},
 	{
-		src: "2023-24-eboard/alam.jpg",
+		src: "2025-2026-eboard/Simon_Ramirez.png",
 		title: Position.WEB_MASTER,
-		name: "Alam Zishan",
+		name: "Simon Ramirez",
 	},
 	
 	// {

@@ -4407,7 +4407,9 @@ input[type="button"].btn-block {
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-align: center;
-  align-items: center;
+  /*align-items: center;*/
+  display: flex;
+  justify-content: flex-end;
 }
 
 .navbar-toggler {
@@ -4469,6 +4471,7 @@ input[type="button"].btn-block {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+    justify-content: flex-end;
   }
   .navbar-expand-sm .navbar-toggler {
     display: none;
@@ -4511,6 +4514,7 @@ input[type="button"].btn-block {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+    justify-content: flex-end;
   }
   .navbar-expand-md .navbar-toggler {
     display: none;
@@ -4553,6 +4557,7 @@ input[type="button"].btn-block {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+    
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -4595,6 +4600,7 @@ input[type="button"].btn-block {
     display: flex !important;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
+    justify-content: flex-end;
   }
   .navbar-expand-xl .navbar-toggler {
     display: none;
@@ -4639,6 +4645,7 @@ input[type="button"].btn-block {
   display: flex !important;
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
+  justify-content: flex-end;
 }
 
 .navbar-expand .navbar-toggler {
@@ -8564,7 +8571,7 @@ button.bg-dark:focus {
 
 .mr-auto,
 .mx-auto {
-  margin-right: auto !important;
+ /*margin-right: auto !important;*/
 }
 
 .mb-auto,
