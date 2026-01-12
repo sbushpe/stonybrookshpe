@@ -11,6 +11,18 @@ class ShpeFooter extends HTMLElement {
 
     const tpl = wrapper.content.querySelector('#footer-style');
     shadow.appendChild(tpl.content.cloneNode(true));
+
+    // Resolve image paths relative to the document's location
+    // This fixes issues with Shadow DOM not resolving relative paths correctly
+    const images = shadow.querySelectorAll('img');
+    images.forEach(img => {
+      const originalSrc = img.getAttribute('src');
+      if (originalSrc) {
+        // Resolve the path relative to the current document's location
+        const resolvedUrl = new URL(originalSrc, window.location.href).href;
+        img.src = resolvedUrl;
+      }
+    });
   }
 }
 
