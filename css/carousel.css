@@ -2,10 +2,17 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+html, body {
+  height: 100%;
+}
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #343a40;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -61,6 +68,17 @@ body {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
+/*Takes in data to make directions for slide animation */
+.scroll-slide {
+  --slide-x: 0px;
+  --slide-y: 0px;
+  --slide-opacity: 0;
+  transform: translate(var(--slide-x), var(--slide-y));
+  opacity: var(--slide-opacity);
+  will-change: transform, opacity;
+}
+  
+
 /* Thin out the marketing headings */
 .featurette-heading {
   font-weight: 300;
@@ -68,6 +86,12 @@ body {
   letter-spacing: -.05rem;
 }
 
+
+/* Footer Styling
+-------------------------------------------------- */
+.footer-pushdown{
+  flex-shrink: 0;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

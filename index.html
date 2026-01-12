@@ -37,13 +37,13 @@
   <link href="css/carousel.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="footer-pushdown">
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a href="index.html">
         <img alt="SHPE logo" src="media/shpe-logo2.png" width="200" height="65">
       </a>
-      <a class="navbar-brand" href="https://www.stonybrook.edu/">Stony Brook University</a>
+      <a class="navbar-brand" href="https://www.stonybrook.edu/"><strong>Stony Brook University</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,19 +51,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testimonials.html">Testimonials</a>
+            <a class="nav-link" href="testimonials.html"><strong>Testimonials</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="events.html">Events</a>
+            <a class="nav-link" href="events.html"><strong>Events</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sponsor-us.html">Sponsor Us</a>
+            <a class="nav-link" href="sponsor-us.html"><strong>Sponsor Us</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact-us.html">Contact Us</a>
+            <a class="nav-link" href="contact-us.html"><strong>Contact Us</strong></a>
           </li>
         </ul>
       </div>
@@ -125,27 +125,27 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-      <div class="row featurette">
-        <div class="col-md-7">
+      <div class="row">
+        <div class="col-md-7 scroll-slide" data-scroll-slide="0,1">
           <h2 class="featurette-heading">Meet the<span class="text-muted"> Executive Board.</span></h2>
         </div>
-        <!-- Three columns of text below the carousel -->
-        <div id="eboard-members" class="row"></div>
+      </div>
+      <!-- Three columns of text below the carousel -->
+      <div id="eboard-members" class="row scroll-slide" data-scroll-slide="0,1"></div>
 
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider">
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
+      <div class="row featurette">
+          <div class="col-md-7 scroll-slide" data-scroll-slide="1,0">
             <h2 class="featurette-heading">The SHPE<span class="text-muted"> Mission and Vision</span></h2>
             <p class="lead">SHPE changes lives by empowering the Hispanic community to realize its fullest potential
               and to impact the world through STEM awareness, access, support, and development. Our vision is a world
-              where
-              Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians, and
+              where Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians, and
               engineers.
             </p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 scroll-slide" data-scroll-slide="1,0">
             <img alt="History" src="media/events/involvement-fair.jpg" width="400" height="500">
           </div>
         </div>
@@ -153,7 +153,10 @@
         <hr class="featurette-divider">
 
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-5 scroll-slide" data-scroll-slide="-1,0">
+            <img alt="History" src="media/lore/history.png" width="400" height="500">
+          </div>
+          <div class="col-md-7 scroll-slide" data-scroll-slide="-1,0">
             <h2 class="featurette-heading">Stony Brook Chapter<span class="text-muted"> History</span></h2>
             <p class="lead">In the fall semester of 1987, Carlos Menjivar of Phi Iota Alpha Fraternity, Inc.,
               the oldest known Latino fraternity, realized there was a need for more Latino representation in
@@ -178,35 +181,22 @@
               guidance and aid so that these students could flourish and complete their education.
             </p>
           </div>
-          <div class="col-md-5">
-            <img alt="History" src="media/lore/history.png" width="400" height="500">
-          </div>
+          
         </div>
 
-        <hr class="featurette-divider">
+        
 
         <!-- /END THE FEATURETTES -->
 
       </div><!-- /.container -->
-
-
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>
-          &copy; 2020 Stony Brook SHPE &middot;
-          <!-- <a href="#">Privacy</a> &middot;
-          <a href="#">Terms</a> &middot;  -->
-          <a href="#" onclick="showChapterBylaws()">Chapter Bylaws</a> &middot;
-          <a href="#" onclick="showNationalSHPEsite()">National SHPE Website</a> &middot;
-          <a href="#" onclick="showMembershipPage()">Join Now</a> &middot;
-          <a href="mailto:sbshpe@gmail.com">sbshpe@gmail.com</a></p>
-      </footer>
   </main>
+  <shpe-footer></shpe-footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="Footer/footer.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,127 @@
+<!--Syling and HTML for reuseable footer web component-->
+
+<template id="footer-style">
+    
+    <style>
+        :host{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer-grid{
+            background-color: #001f59;
+            padding: 32px 4% 24px;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            color:white;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer-col{
+            font-family: Arial, sans-serif;
+            color:#ffffff;
+            text-align: center;
+            text-decoration: none;
+            min-width: 0;
+        }
+
+        .footer-col a{
+            color:white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+
+        }
+        
+        .social-title{
+            padding-bottom: 3%;
+        }
+
+        .socials{
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            margin-top: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .socials a{
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            align-items: center;
+            justify-content: center;
+        }
+        .socials a:hover, .socials a:focus-visible {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.18);
+        }
+        .social-icon{
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+        .footer-col img{
+            max-width: 100%;
+            height: auto;
+        }
+        .footer-col h1{
+            font-size: 1.5rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            word-break: break-word;
+        }
+
+        @media (max-width: 900px){
+            .footer-grid{
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+    
+    <div class="footer-grid">
+        <!--First col. 300     100-->
+
+        <div class="footer-col">
+            <img alt="SHPE logo" src="media/shpe-logo2.png" width="300" height="100">
+            <h3><a href="#" class="internal-links">Back to top</a></h3>
+        </div>
+
+        <!--Second col-->
+        <div class="footer-col">
+            <h1 class="social-title">Follow us on Social media</h1>
+            <div class="socials">
+                <a href="https://www.youtube.com/channel/UC4ZKTRm4mI8-H77zAZaNckg" aria-label="YouTube">
+                    <img class="social-icon" src="/media/icons/youtube.svg" alt="YouTube">
+                </a>
+                <a href="https://www.instagram.com/stonybrookshpe/" aria-label="Instagram">
+                    <img class="social-icon" src="/media/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/shpe-at-stony-brook-university/" aria-label="LinkedIn">
+                    <img class="social-icon" src="/media/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://www.facebook.com/stonybrookshpe/" aria-label="Facebook">
+                    <img class="social-icon" src="/media/icons/facebook.svg" alt="Facebook">
+                </a>
+                <a href="https://twitter.com/stonybrookshpe" aria-label="X (formerly Twitter)">
+                    <img class="social-icon" src="/media/icons/x.svg" alt="X (formerly Twitter)">
+                </a>
+            </div>
+        </div>
+
+        <!--Third col-->
+        <div class="footer-col">
+            <h3><a href=""></a>Join Now</h3>
+            <h3><a href="https://docs.google.com/forms/d/e/1FAIpQLScaEYml1uRflbaPz17d46rwEo-PkwJ084W9csFdw6d_0-U-mw/viewform?usp=header">Email List</a></h3>
+            <h3><a href="contact-us.html">Contact Us</a></h3>
+            <h3><a href="https://shpe.org/">National Shpe Website</a></h3>
+        </div>
+    </div>
+</template>
