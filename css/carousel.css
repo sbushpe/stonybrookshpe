@@ -105,7 +105,9 @@ body {
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 45px;
+    color: #001f59;
+    font-weight: bolder !important;
   }
 }
 

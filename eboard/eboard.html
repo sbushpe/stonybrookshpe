@@ -1,0 +1,192 @@
+<!--Syling and HTML for reuseable footer web component-->
+
+<template id="eboard">
+
+    <style>
+        :host{
+            display: block;
+            overflow: visible; /* Prevent host from clipping card corners */
+        }
+        :host(.row){
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .card-grid{
+            display: flex;
+            width: 100%;
+            margin: 0 0 20px 0;
+            gap: 12px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding: 16px 10px;
+            box-sizing: border-box;
+        }
+
+        .card{
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 5px 5px 5px 5px;
+            border-color: #001f59;
+            border-width: 1px;
+            background-color: #001f59;
+            flex: 1 1 0;
+            min-width: 180px;
+            max-width: 220px;
+            margin: 0;
+            overflow: visible; /* Prevent clipping of rounded corners */
+        }
+
+        .card:hover{
+            transform: translateY(-2px);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.10);
+        }
+
+        .card img{
+            max-width: 100%; /* Ensures the image doesn't exceed its container's width */   /* Maintains the aspect ratio proportionally */
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            object-position: center;
+            border-radius: 5px 5px 0 0;
+        }
+        
+        .card-text{
+            display: flex;
+            flex-direction: column;
+            color:white;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0 0;
+            gap: 5px;
+            min-height: 120px;
+        }
+        .card-text h4{
+            margin: 0;
+        }
+        #position{
+            color: #f26637;
+        }
+        .card-social-link{
+            display: flex;
+            width: 32px;
+            height: 32px;
+            margin: 10px auto 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform .15s ease, background .15s ease;
+        }
+        .card-social-link:hover,
+        .card-social-link:focus-visible{
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+        .card-social-icon{
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+        .card > hr{
+            width: 80%;
+            margin: 8px auto 6px;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .img-container{
+            width: 100%;
+            height: 200px; /* Set a consistent height for all containers */
+            overflow: hidden; /* Hides any overflowing parts of the image */
+            border-radius: 5px 5px 0 0; /* Match card's top corners to prevent clipping */
+        }
+        
+        .image-container img {
+            width: 100%; /* Ensures the image takes the full width of the container */
+            height: 100%; /* Ensures the image takes the full height of the container */
+            object-fit: cover; /* This is key: it scales the image to cover the entire container while maintaining its aspect ratio, cropping the overflow if necessary */
+            object-position: center; /* Centers the image within the container */
+            }
+        
+
+    </style>
+
+    <div class="card-grid">
+        <div class="card">
+            <div class="img-container">
+                <img src="media/eboard-members/2025-2026-eboard/pres-avilla.jpg" alt="President">
+            </div>
+            <div class="card-text">
+                <h4 id="position">President</h4>
+                <h4>Arelis Villa-Perea</h4>
+                <h4>Computer Engineering</h4>
+            </div>
+            <hr>
+                <a class="card-social-link" href="https://www.linkedin.com/in/arelis-villa-perea/">
+                    <img class="card-social-icon" src="media/icons/linkedin.svg" alt="LinkedIn">
+                </a>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="media/eboard-members/2025-2026-eboard/treasurer-aLam.png" alt="Treasurer">
+            </div>
+            <div class="card-text">
+                <h4 id="position">Treasurer</h4>
+                <h4>Mario Lam</h4>
+                <h4>Chemical & Molecular Engineering</h4>
+            </div>
+            <hr>
+            <a class="card-social-link" href="https://www.linkedin.com/in/mario-lam/">
+                <img class="card-social-icon" src="media/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="media/eboard-members/2025-2026-eboard/secy-arod.jpg" alt="Secretary">
+            </div>
+            <div class="card-text">
+                <h4 id="position">Secretary</h4>
+                <h4>Adrian Rodriguez</h4>
+                <h4>Mechanical Engineering</h4>
+            </div>
+            <hr>
+            <a class="card-social-link" href="https://www.linkedin.com/in/adrian-m-rodriguez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <img class="card-social-icon" src="media/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="card">
+                <div class="img-container">
+                <img src="media/eboard-members/2025-2026-eboard/Simon_Ramirez.png" alt="Webmaster">
+            </div>
+            <div class="card-text">
+                <h4 id="position">Webmaster</h4>
+                <h4>Simon Ramirez</h4>
+                <h4>Computer Science</h4>
+            </div>
+            <hr>
+            <a class="card-social-link" href="https://www.linkedin.com/in/simon-ramirezcs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <img class="card-social-icon" src="media/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="card">
+            <div class="img-container">
+                <img src="media/eboard-members/2025-2026-eboard/oc-jaqueron.jpg" alt="Outreach Chair">
+            </div>
+            <div class="card-text">
+                <h4 id="position">Outreach Chair</h4>
+                <h4>Jabe Aqueron</h4>
+                <h4>Chemical & Molecular Engineering</h4>
+            </div>
+            <hr>
+            <a class="card-social-link" href="https://www.linkedin.com/in/jabiel-aqueron/">
+                <img class="card-social-icon" src="media/icons/linkedin.svg" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</template>
+
+    
