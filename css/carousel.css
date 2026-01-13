@@ -32,7 +32,7 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
-  background-color: #343a40;
+  background-color: #001f59;
 }
 .carousel-item > img {
   position: center;
@@ -85,6 +85,11 @@ body {
   line-height: 1;
   letter-spacing: -.05rem;
 }
+#testimony-heading{
+    color: #001f59;
+    font-weight: bolder !important;
+}
+
 
 
 /* Footer Styling
