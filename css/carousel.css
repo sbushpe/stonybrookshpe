@@ -84,6 +84,7 @@ body {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
+  font-weight: bolder !important;
 }
 #testimony-heading{
     color: #001f59;

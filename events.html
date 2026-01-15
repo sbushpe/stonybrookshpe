@@ -34,6 +34,7 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/events.css" rel="stylesheet">
 </head>
 
 <body>
@@ -69,13 +70,28 @@
         </nav>
     </header>
 
-    <!-- <br><br> -->
+    <div class="events-container">
+        <section class="events-hero container">
+            <h2 class="featurette-heading heading">Never miss<span class="text-muted"> what's happening</span></h2>
+            <p class="events-hero__subheading">Subscribe to our email list or sync your calendar for reminders</p>
+            <div class="events-hero__buttons">
+                <a class="event-button" href="https://docs.google.com/forms/d/e/1FAIpQLScaEYml1uRflbaPz17d46rwEo-PkwJ084W9csFdw6d_0-U-mw/viewform?usp=header">Email List</a>
+                <a class="event-button" href="https://calendar.google.com/calendar/u/6?cid=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Sync Calendar</a>
+            </div>
+            <p class="events-hero__subheading">Check out what’s coming up soon</p>
+            <a class="event-button" href="#calendar">Upcoming Events</a>
+        </section>
+    </div>
+    
+
+
+    
 
     <main role="main">
-        <div style="margin-top: 50px; text-align: center;">
+        <div class="events-calendar" id="calendar">
             <iframe id='frame-events'
                 src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&title=SHPE%20Events"
-                style="border:solid 0px #777;">
+                style="border:solid 0px #414040;">
             </iframe>
         </div>
     </main>
