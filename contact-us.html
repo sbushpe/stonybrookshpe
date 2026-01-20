@@ -13,7 +13,7 @@
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet" />
-  <link href="css/bootstrap-social.css" rel="stylesheet" />
+  <!--<link href="css/bootstrap-social.css" rel="stylesheet" />-->
 
   <script type="module" src="js/index.js"></script>
 
@@ -36,6 +36,8 @@
   </style>
   <!-- Custom styles for this template -->
   <link href="css/carousel.css" rel="stylesheet" />
+  <link href="css/contact-us.css" rel="stylesheet"/>
+  <script src="https://kit.fontawesome.com/b5a4acf0c9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -77,51 +79,62 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
-      <div style="height: 70px; display: block;"></div>
-
-      <section id="contact-info-section" class="text-center">
-        <h2 class="font-weight-bold text-center my-4">
-          Contact Information
-        </h2>
-      </section>
-      <hr class="featurette-divider" />
-
-      <!--Section: Contact v.2-->
       <section class="mx-auto">
         <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">
-          Contact us
-        </h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">
-          Please fill the form below in order to contact us
-        </p>
+        <h2 class="featurette-heading">Contact <span class="text-muted">Us</span></h2>
 
-        <div class="row">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSciswlswncLj4djiBW8m5NET9TlDvRg1uoqW-4b8D1UQssU4Q/viewform?embedded=true"
-            width="1115" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="Section-divider">
+
+          <form class="contact" id="contact-form">
+            <h3>Send Us A Message</h3>
+            
+            <!--nes just stands for name, email, subject. all the input tags are going to share the same atributes.-->
+            <label for="contact-name">Name</label>
+            <input class="nes" id="contact-name" name="name" type="text" placeholder=" Your Name" required>
+            <label for="contact-email">Email</label>
+            <input class="nes" id="contact-email" name="email" type="email" placeholder=" Email@Example.com" required>
+            <label for="contact-subject">Subject</label>
+            <input class="nes" id="contact-subject" name="title" type="text" placeholder=" How can we help?" required>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder=" Your message..." required></textarea>
+            <button type="submit">Submit</button>
+            <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+
+          </form>
+          <div class="socials">
+              <h3>Find Us Online!</h3>
+              <div class="social-grid">
+                  <a class="social-boxes" href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord fa-5x"></i></a>
+                  <a class="social-boxes" href="mailto:sbshpe@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope fa-5x"></i></a>
+                  <a class="social-boxes" href="https://www.linkedin.com/company/shpe-at-stony-brook-university/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin fa-5x"></i></a>
+                  <a class="social-boxes" href="https://www.instagram.com/stonybrookshpe/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram fa-5x"></i></a>
+                  <a class="social-boxes" href="https://www.tiktok.com/@stonybrookshpe?_r=1&_d=secCgYIASAHKAESPgo8LWPzLK9kvGKVganiC48V6ZddQHVGvRFHRTnmbhS7EqOONXrP6pxk6%2BnDFYyfnl7sp1qPOZbHP6DxuOLgGgA%3D&_svg=3&checksum=a7607e8484f9ff416720ca1515006a40c6a50ef2ba0cbade8ac07359c43fa4c5&enable_clips=1&item_author_type=2&sec_uid=MS4wLjABAAAA4rZY45PUVutGoIRC90jzolsCDixVttDfz4-dwU--J1oUOLpku5eRm8TCiRs9o-Ik&sec_user_id=MS4wLjABAAAATSIBm_Ki6Iwv7bDWE9-QePjQN4LZhTSyDDzRqLI-ZXIA0fA4sOPLm9ldHKVrVlqc&share_app_id=1233&share_author_id=7543370728948990990&share_link_id=F3C8AEDE-E6DF-44A1-A8D3-33196B61A96E&share_region=US&share_scene=1&sharer_language=en&social_share_type=5&source=h5_m&timestamp=1768521506&tt_from=sms&u_code=28ced0l1cfih1&ug_btm=b2878%2Cb5836&user_id=51975082360725504&utm_campaign=client_share&utm_medium=ios&utm_source=sms" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok fa-5x"></i></a>
+                  <a class="social-boxes" href="https://www.youtube.com/channel/UC4ZKTRm4mI8-H77zAZaNckg" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-youtube fa-5x"></i></a>
+                  <a class="social-boxes" href="https://www.facebook.com/stonybrookshpe/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-5x"></i></a>
+                  <a class="social-boxes" href="https://twitter.com/stonybrookshpe/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-x-twitter fa-5x"></i></a>
+              </div>
+          </div>
+
         </div>
-        <br>
-        <br>
-        <div align="center">
-          <a href="https://www.facebook.com/stonybrookshpe/" target="_blank" class="btn-social btn-facebook"><i
-              class="fa fa-facebook"></i></a>
-          <a href="https://www.instagram.com/stonybrookshpe/" target="_blank" class="btn-social btn-instagram"><i
-              class="fa fa-instagram"></i></a>
-          <a href="https://twitter.com/stonybrookshpe/" target="_blank" class="btn-social btn-twitter"><i
-              class="fa fa-twitter"></i></a>
-          <a href="https://www.youtube.com/channel/UC4ZKTRm4mI8-H77zAZaNckg" target="_blank"
-            class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
-        </div>
-        <br>
-        <br>
-        <!--Grid column-->
       </section>
-      <!--Section: Contact v.2-->
+    </div>
+    <div class="Text-Section-divider">
 
-      <!-- /END THE FEATURETTES -->
+      <div class="alumni">
+        <h3>Give Back as an Alumni</h3>
+        <p>Graduation is just the beginning. Stay connected with SHPE SBU and help shape the future of our chapter at Stony Brook.</p>
+        <a class="cta-button" href="https://forms.gle/AVWWL1XG3hGX8Gn26" target="_blank" rel="noopener noreferrer">Alumni Interest Form</a>
+      </div>
+
+
+      <div class="National-member">
+        <h3>Become a National SHPE Member</h3>
+        <p>Join the largest association of Hispanic STEM professionals in the nation. Access exclusive networking events, career resources, scholarships, and connect with 10,000+ members nationwide.</p>
+        <a class="cta-button" href="https://shpe.org/membership/" target="_blank" rel="noopener noreferrer">National Membership</a>
+      </div>
+
+
+
     </div>
     <!-- /.container -->
 
@@ -130,6 +143,8 @@
   <!-- FOOTER -->
   <shpe-footer></shpe-footer>
   <script src="Footer/footer.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="js/email-contact-us.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
