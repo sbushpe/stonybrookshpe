@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,107 +11,190 @@
     <link rel="icon" href="media/Shpe Icon.png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <script src="js/index.js"></script>
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
-    <link href="css/events.css" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a href="index.html">
-                <img alt="SHPE logo" src="media/shpe-logo2.png" width="200" height="65">
-            </a>
-            <a class="navbar-brand" href="https://www.stonybrook.edu/"><strong>Stony Brook University</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><strong>Home</strong><span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="testimonials.html"><strong>Testimonials</strong></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="events.html"><strong>Events</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sponsor-us.html"><strong>Sponsor Us</strong></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact-us.html"><strong>Contact Us</strong></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <div class="events-container">
-        <section class="events-hero container">
-            <h2 class="featurette-heading heading">Never miss<span class="text-muted"> what's happening</span></h2>
-            <p class="events-hero__subheading">Subscribe to our email list or sync your calendar for reminders</p>
-            <div class="events-hero__buttons">
-                <a class="event-button" href="https://docs.google.com/forms/d/e/1FAIpQLScaEYml1uRflbaPz17d46rwEo-PkwJ084W9csFdw6d_0-U-mw/viewform?usp=header">Email List</a>
-                <a class="event-button" href="https://calendar.google.com/calendar/u/6?cid=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Sync Calendar</a>
-            </div>
-            <p class="events-hero__subheading">Check out what’s coming up soon</p>
-            <a class="event-button" href="#calendar">Upcoming Events</a>
-        </section>
+  <!-- NAV -->
+  <nav class="shpe-nav">
+    <div class="shpe-nav-inner">
+      <a href="index.html" class="shpe-nav-brand">
+        <img src="media/shpe-logo-transparent.png" alt="SHPE" class="shpe-nav-mark">
+        <span class="shpe-nav-divider-line">|</span>
+        <span class="shpe-nav-wordtext">Stony Brook University</span>
+      </a>
+      <button class="shpe-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="shpe-nav-links">
+        <a href="index.html" class="shpe-nav-link">Home</a>
+        <a href="testimonials.html" class="shpe-nav-link">Testimonials</a>
+        <a href="events.html" class="shpe-nav-link is-active">Events</a>
+        <a href="sponsor-us.html" class="shpe-nav-link">Sponsor Us</a>
+        <a href="contact-us.html" class="shpe-nav-cta">Contact Us →</a>
+      </div>
     </div>
-    
+  </nav>
 
+  <!-- EVENTS HERO -->
+  <section class="events-hero-section container">
+    <div class="events-hero-top">
+      <div class="reveal">
+        <div class="eyebrow">What's Happening</div>
+        <h1 class="display-l" style="margin-top:18px">
+          Never miss<br>
+          <em class="serif-italic">what's happening.</em>
+        </h1>
+        <p style="font-size:17px;color:var(--ink-500);max-width:480px;margin-top:20px;line-height:1.6">
+          Subscribe to our email list or sync your calendar for reminders — never miss a workshop,
+          social, or outreach night.
+        </p>
+      </div>
+      <div class="events-hero-btns reveal reveal-2">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScaEYml1uRflbaPz17d46rwEo-PkwJ084W9csFdw6d_0-U-mw/viewform?usp=header"
+           target="_blank" rel="noopener" class="btn btn-primary">
+          Join Email List <span class="btn-arrow">→</span>
+        </a>
+        <a href="https://calendar.google.com/calendar/u/6?cid=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+           target="_blank" rel="noopener" class="btn btn-outline">
+          Sync Calendar
+        </a>
+      </div>
+    </div>
 
-    
+    <!--
+      Upcoming events list — currently disabled.
+      These rows are placeholder/sample data; we want the next ~4 events to be
+      pulled live from the public Google Calendar so the eboard only updates
+      one place.
 
-    <main role="main">
-        <div class="events-calendar" id="calendar">
-            <iframe id='frame-events'
-                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&title=SHPE%20Events"
-                style="border:solid 0px #414040;">
-            </iframe>
+      See docs/events-calendar-sync.md for the integration plan
+      (Google Calendar API v3 key + js/events-sync.js to render into #events-list).
+
+      Re-enable by either:
+        (a) un-commenting this block to show the static sample again, or
+        (b) following docs/events-calendar-sync.md to wire the live feed.
+    -->
+    <div class="events-list" id="events-list"></div>
+    <!--
+      <div class="events-list" id="events-list">
+        <div class="event-row reveal reveal-1">
+          <div class="event-date">
+            <div class="event-m">OCT</div>
+            <div class="event-d">28</div>
+          </div>
+          <div class="event-body">
+            <div class="event-title">General Body Meeting</div>
+            <div class="event-where">Javits 110 · 8:00 PM</div>
+          </div>
+          <div class="event-tag">GBM</div>
+          <a class="event-rsvp" href="contact-us.html">RSVP <span>&rarr;</span></a>
         </div>
-    </main>
-    <br>
-    <shpe-footer></shpe-footer> 
-    <script src="Footer/footer.js" defer></script>
-    <script>
-        window.onload = () => {
-            const WIDTH_OFFSET = 50;
-            const HEIGHT_OFFSET = 146;
-            let frameEvent = document.getElementById('frame-events');
-            frameEvent.setAttribute('width', window.innerWidth - WIDTH_OFFSET);
-            frameEvent.setAttribute('height', (window.innerHeight - HEIGHT_OFFSET));
 
-            window.addEventListener('resize', () => {
-                frameEvent.setAttribute('width', window.innerWidth - WIDTH_OFFSET);
-                frameEvent.setAttribute('height', (window.innerHeight - HEIGHT_OFFSET));
-            });
-        };
-    </script>
-    <script src="js/bootstrap.bundle.js"></script>
+        <div class="event-row reveal reveal-2">
+          <div class="event-date">
+            <div class="event-m">NOV</div>
+            <div class="event-d">04</div>
+          </div>
+          <div class="event-body">
+            <div class="event-title">Resume Workshop with Lockheed Martin</div>
+            <div class="event-where">Engineering 143 · 7:00 PM</div>
+          </div>
+          <div class="event-tag">Professional</div>
+          <a class="event-rsvp" href="contact-us.html">RSVP <span>&rarr;</span></a>
+        </div>
+
+        <div class="event-row reveal reveal-3">
+          <div class="event-date">
+            <div class="event-m">NOV</div>
+            <div class="event-d">15</div>
+          </div>
+          <div class="event-body">
+            <div class="event-title">Noche de Ciencias &mdash; Outreach Night</div>
+            <div class="event-where">SAC Ballroom · 6:00 PM</div>
+          </div>
+          <div class="event-tag">Outreach</div>
+          <a class="event-rsvp" href="contact-us.html">RSVP <span>&rarr;</span></a>
+        </div>
+
+        <div class="event-row reveal reveal-4">
+          <div class="event-date">
+            <div class="event-m">NOV</div>
+            <div class="event-d">22</div>
+          </div>
+          <div class="event-body">
+            <div class="event-title">Familia Dinner</div>
+            <div class="event-where">Charles B. Wang Center</div>
+          </div>
+          <div class="event-tag">Social</div>
+          <a class="event-rsvp" href="contact-us.html">RSVP <span>&rarr;</span></a>
+        </div>
+      </div>
+    -->
+
+  </section>
+
+  <!-- FULL CALENDAR EMBED -->
+  <section class="events-calendar-section container" id="calendar">
+    <div class="events-calendar-label">Full Calendar</div>
+    <div class="events-calendar-frame">
+      <iframe id="frame-events"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=dGg4OTY2NTdjZDJrZ2FkaDU0aDEwc2VzM2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB&title=SHPE%20Events"
+        title="SHPE Events calendar"
+        width="800" height="600">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="shpe-footer">
+    <div class="shpe-footer-inner">
+      <a href="index.html" class="shpe-footer-brand">
+        <img src="media/shpe-logo-transparent.png" alt="SHPE" class="shpe-footer-mark">
+        <span class="shpe-footer-divider-line">|</span>
+        <span class="shpe-footer-wordtext">Stony Brook University</span>
+      </a>
+      <nav class="shpe-footer-nav">
+        <a href="index.html" class="shpe-footer-link">Home</a>
+        <a href="testimonials.html" class="shpe-footer-link">Testimonials</a>
+        <a href="events.html" class="shpe-footer-link">Events</a>
+        <a href="sponsor-us.html" class="shpe-footer-link">Sponsor Us</a>
+        <a href="contact-us.html" class="shpe-footer-link">Contact Us</a>
+        <a href="https://shpe.org/" target="_blank" rel="noopener" class="shpe-footer-link">National SHPE</a>
+      </nav>
+    </div>
+    <div class="shpe-footer-rule"></div>
+    <div class="shpe-footer-legal">
+      <div>© 2026 SHPE Stony Brook · Society of Hispanic Professional Engineers</div>
+      <div class="social-chips on-dark">
+        <a href="https://www.youtube.com/channel/UC4ZKTRm4mI8-H77zAZaNckg" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="media/icons/youtube.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/stonybrookshpe/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="media/icons/instagram.svg" alt="">
+        </a>
+        <a href="https://www.linkedin.com/company/shpe-at-stony-brook-university/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="media/icons/linkedin.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/stonybrookshpe/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="media/icons/facebook.svg" alt="">
+        </a>
+        <a href="https://twitter.com/stonybrookshpe" target="_blank" rel="noopener" aria-label="X">
+          <img src="media/icons/x.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shpe.js" defer></script>
+  <script>
+    // Resize calendar iframe to fit viewport
+    window.addEventListener('load', () => {
+      const frame = document.getElementById('frame-events');
+      function resize() {
+        const w = Math.min(frame.parentElement.clientWidth, 1280);
+        frame.setAttribute('width', w);
+        frame.setAttribute('height', Math.max(500, Math.round(w * 0.55)));
+      }
+      resize();
+      window.addEventListener('resize', resize);
+    });
+  </script>
 </body>
-
 </html>

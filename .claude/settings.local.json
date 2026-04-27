@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tar -xf /tmp/design -C /tmp/)",
+      "Read(//tmp/stony-brook-shpe-design-system/**)"
+    ]
+  }
+}

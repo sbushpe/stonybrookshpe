@@ -1,3 +1,5 @@
+/* Sponsor Us page — scoped with body.page-sponsor-us. Layout rhythm from design.md §5; SHPE colors. */
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -7,21 +9,43 @@
   user-select: none;
 }
 
-body {
-  padding-bottom: 0;
-}
-
-main {
-  flex: 1 0 auto;
-}
-
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
 
-.sponsor-textbox {
+body.page-sponsor-us .navbar.fixed-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.page-sponsor-us .sponsors-main {
+  flex: 1 0 auto;
+}
+
+body.page-sponsor-us .sponsor-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  body.page-sponsor-us .sponsor-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+body.page-sponsor-us .sponsor-section--wash,
+body.page-sponsor-us .sponsor-section--light {
+  background-color: #fff;
+}
+
+body.page-sponsor-us .sponsor-intro .featurette-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.page-sponsor-us .sponsor-textbox {
   background-color: #fff;
   border: 1px solid #e5e5e5;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -32,18 +56,22 @@ main {
   text-align: center;
 }
 
-.sponsor-textbox .featurette-heading {
+body.page-sponsor-us .sponsor-textbox .featurette-heading {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.sponsor-textbox .lead,
-.sponsor-textbox .lead a {
+body.page-sponsor-us .sponsor-textbox .lead,
+body.page-sponsor-us .sponsor-textbox .lead a {
   color: #001f59;
   font-weight: bold;
 }
 
-.sponsor-grid {
+body.page-sponsor-us .sponsor-textbox .lead a:hover {
+  color: #f26534;
+}
+
+body.page-sponsor-us .sponsor-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
@@ -51,19 +79,19 @@ main {
   margin-bottom: 2.5rem;
 }
 
-.sponsor-grid .sponsor-textbox {
+body.page-sponsor-us .sponsor-grid .sponsor-textbox {
   margin: 0;
   height: 100%;
 }
 
-.sponsor-logo-box {
+body.page-sponsor-us .sponsor-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
 }
 
-.sponsor-logo-box img {
+body.page-sponsor-us .sponsor-logo-box img {
   max-width: min(320px, 100%);
   max-height: 140px;
   width: auto;
@@ -72,18 +100,18 @@ main {
 }
 
 @media (max-width: 991.98px) {
-  .sponsor-grid {
+  body.page-sponsor-us .sponsor-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 575.98px) {
-  .sponsor-grid {
+  body.page-sponsor-us .sponsor-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.cta-button {
+body.page-sponsor-us .cta-button {
   min-height: 20px;
   border-radius: 8px;
   background-color: #001f59;
@@ -98,9 +126,14 @@ main {
   width: fit-content;
   display: inline-block;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
-.cta-button:hover {
+body.page-sponsor-us .cta-button:visited {
+  color: white;
+}
+
+body.page-sponsor-us .cta-button:hover {
   color: #f26534;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

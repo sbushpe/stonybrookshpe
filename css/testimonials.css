@@ -1,0 +1,108 @@
+/* Testimonials page only — scoped to body.page-testimonials. Layout rhythm from design.md §5; SHPE colors. */
+
+body.page-testimonials .navbar.fixed-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.page-testimonials .testimonials-main {
+  flex: 1 0 auto;
+}
+
+body.page-testimonials .testimonials-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  body.page-testimonials .testimonials-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
+
+body.page-testimonials .testimonials-intro {
+  padding-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  body.page-testimonials .testimonials-intro {
+    padding-bottom: 32px;
+  }
+}
+
+body.page-testimonials .testimonials-intro .featurette-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body.page-testimonials .testimonials-section--wash {
+  background-color: #fff;
+}
+
+body.page-testimonials .testimonial-card {
+  background-color: #fff;
+  border: 1px solid rgba(0, 31, 89, 0.15);
+  border-radius: 24px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 8px 24px;
+  box-sizing: border-box;
+}
+
+body.page-testimonials .testimonial-card__avatar-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+body.page-testimonials .testimonial-card__avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 31, 89, 0.2);
+  display: block;
+}
+
+body.page-testimonials .testimonial-card__avatar--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001f59;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1;
+  border: none;
+}
+
+body.page-testimonials .testimonial-card__name {
+  color: #001f59;
+  font-weight: 700 !important;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+body.page-testimonials .testimonial-card__role {
+  color: #f26534;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+body.page-testimonials .testimonial-card__quote {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+body.page-testimonials .testimonials-grid .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+body.page-testimonials .testimonials-grid .row > [class*="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+}
