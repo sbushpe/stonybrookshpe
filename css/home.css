@@ -1,0 +1,116 @@
+/* Home page only — scoped to body.home. Layout rhythm from design.md §5; SHPE colors unchanged. */
+
+body.home .navbar.fixed-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.home .home-main {
+  flex: 1 0 auto;
+}
+
+/* Hero: full-bleed carousel, no extra section padding */
+body.home .home-section.home-hero {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body.home .home-hero .carousel {
+  margin-bottom: 0;
+}
+
+body.home .home-hero .carousel-caption {
+  max-width: 36rem;
+  padding-bottom: 2.5rem;
+}
+
+body.home .home-hero .carousel-item .container {
+  display: flex;
+  justify-content: center;
+}
+
+body.home .home-hero .carousel-caption.text-left {
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+}
+
+body.home .home-hero .carousel-caption.text-right {
+  margin-left: auto;
+  margin-right: 0;
+  text-align: right;
+}
+
+body.home .home-hero .carousel-caption:not(.text-left):not(.text-right) {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Section bands — 8px scale (64px = 8×8) */
+body.home .home-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (max-width: 767.98px) {
+  body.home .home-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+body.home .home-section--wash,
+body.home .home-section--light {
+  background-color: #fff;
+}
+
+body.home .home-section-eboard .home-section__title {
+  margin-bottom: 24px;
+}
+
+/* Featurettes */
+body.home .home-featurette {
+  margin-bottom: 0;
+}
+
+body.home .home-featurette + .home-featurette {
+  margin-top: 0;
+}
+
+body.home .home-featurette__media {
+  border-radius: 24px;
+  overflow: hidden;
+  line-height: 0;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 8px 24px;
+}
+
+body.home .home-featurette__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 520px;
+}
+
+body.home .home-featurette__copy {
+  padding: 24px 28px;
+  border: 1px solid rgba(0, 31, 89, 0.15);
+  border-radius: 24px;
+  background-color: #fff;
+  height: 100%;
+}
+
+body.home .home-section--wash .home-featurette__copy,
+body.home .home-section--light .home-featurette__copy {
+  background-color: #fff;
+}
+
+body.home .home-featurette__copy .featurette-heading {
+  margin-top: 0;
+}
+
+@media (min-width: 62em) {
+  body.home .home-featurette__copy .featurette-heading {
+    margin-top: 0;
+  }
+}
