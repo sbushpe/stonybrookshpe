@@ -268,17 +268,17 @@ h1, h2, h3, h4 {
   white-space: nowrap;
   text-decoration: none;
 }
-.shpe-nav-mark { height: 28px; width: auto; display: block; flex-shrink: 0; }
+.shpe-nav-mark { height: 38px; width: auto; display: block; flex-shrink: 0; }
 .shpe-nav-divider-line {
   color: rgba(255,255,255,.4);
   font-weight: 200;
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 26px;
+  margin: 0 12px;
   line-height: 1;
   flex-shrink: 0;
 }
 .shpe-nav-wordtext {
-  font: 600 13px/1 'Inter', sans-serif;
+  font: 600 15px/1 'Inter', sans-serif;
   color: #fff;
   letter-spacing: 0.04em;
   white-space: nowrap;
@@ -427,7 +427,7 @@ h1, h2, h3, h4 {
   font-family: 'Anton';
   font-weight: 400;
   font-size: clamp(4rem, 11vw, 10rem);
-  line-height: 0.85;
+  line-height: 0.98;
   letter-spacing: -0.025em;
   margin: 0 0 32px;
   color: #fff;
@@ -1518,17 +1518,17 @@ h1, h2, h3, h4 {
   white-space: nowrap;
   text-decoration: none;
 }
-.shpe-footer-mark { height: 20px; width: auto; display: block; flex-shrink: 0; }
+.shpe-footer-mark { height: 34px; width: auto; display: block; flex-shrink: 0; }
 .shpe-footer-divider-line {
   color: rgba(255,255,255,.4);
   font-weight: 200;
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 24px;
+  margin: 0 12px;
   line-height: 1;
   flex-shrink: 0;
 }
 .shpe-footer-wordtext {
-  font: 600 13px/1 'Inter', sans-serif;
+  font: 600 15px/1 'Inter', sans-serif;
   color: #fff;
   letter-spacing: 0.04em;
   white-space: nowrap;
