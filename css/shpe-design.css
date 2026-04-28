@@ -362,7 +362,7 @@ h1, h2, h3, h4 {
   min-height: calc(100vh - 66px);
   display: flex;
   flex-direction: column;
-  padding: 80px 0 0;
+  padding: 80px 0 96px;
 }
 .shpe-hero-grid {
   position: absolute;
@@ -1641,7 +1641,7 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
   .section { padding: 80px 0; }
-  .shpe-hero { padding: 60px 0 0; }
+  .shpe-hero { padding: 60px 0 80px; }
   .shpe-hero-inner { padding: 0 20px; }
   .sponsor-grid-3, .sponsor-grid-4 { grid-template-columns: 1fr; }
   .shpe-footer-inner { flex-direction: column; align-items: flex-start; }
