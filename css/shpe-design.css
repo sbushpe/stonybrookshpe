@@ -955,9 +955,28 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 .sponsor-ph-accent { color: var(--shpe-orange); }
+/* ===== SPONSOR BENEFITS MATRIX =====
+   Benefit x tier grid. Sized from two variables so the table grows with the
+   offering instead of being hard-coded to a column count:
+     --tiers     number of tier columns (set inline in sponsor-us.html)
+     --tier-col  minimum width of one tier column
+     --label-col minimum width of the benefit-name column
+   The track list, the intrinsic min-width and the mobile behaviour are all
+   derived from these, so adding a tier is a one-number change in the markup. */
+.sponsor-benefits-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+}
 .sponsor-benefits {
+  --tiers: 5;
+  --tier-col: 132px;
+  --label-col: 300px;
   display: grid;
-  grid-template-columns: 2fr repeat(3,1fr);
+  grid-template-columns:
+    minmax(var(--label-col), 2fr)
+    repeat(var(--tiers), minmax(var(--tier-col), 1fr));
+  min-width: calc(var(--label-col) + (var(--tiers) * var(--tier-col)));
   border: 1px solid var(--ink-100);
   border-radius: 16px;
   overflow: hidden;
@@ -965,24 +984,59 @@ h1, h2, h3, h4 {
 .sponsor-benefit-h {
   background: var(--shpe-navy);
   color: #fff;
-  padding: 18px 20px;
+  padding: 18px 16px;
   font: 700 12px 'Inter';
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  line-height: 1.35;
+  /* Bottom-aligned so the price line shares a baseline across every header,
+     even when a long tier name such as "Community Partner" wraps to two. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
   text-align: center;
 }
-.sponsor-benefit-h:first-child { text-align: left; }
+.sponsor-benefit-h.is-label { align-items: flex-start; text-align: left; }
+.sponsor-benefit-price {
+  font: 400 11px 'Inter';
+  letter-spacing: 0.03em;
+  text-transform: none;
+  opacity: 0.72;
+  font-variant-numeric: tabular-nums;
+}
 .sponsor-benefit-cell {
-  padding: 16px 20px;
+  padding: 16px;
+  min-height: 56px;
   border-bottom: 1px solid var(--ink-100);
   background: #fff;
-  text-align: center;
   font: 600 14px 'Inter';
   color: var(--shpe-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.sponsor-benefit-cell:first-child { text-align: left; color: var(--ink-700); font-weight: 500; }
-.sponsor-benefit-check { color: var(--shpe-orange); font-size: 18px; }
-.sponsor-benefit-dash { color: var(--ink-300); }
+/* Explicit class rather than a positional :nth-child rule, which would have to
+   be rewritten every time the tier count changes. */
+.sponsor-benefit-cell.is-label {
+  justify-content: flex-start;
+  text-align: left;
+  padding: 16px 22px;
+  color: var(--ink-700);
+  font-weight: 500;
+  line-height: 1.45;
+}
+.sponsor-benefit-check { color: var(--shpe-orange); font-size: 18px; line-height: 1; }
+.sponsor-benefit-dash { color: var(--ink-300); font-size: 15px; line-height: 1; }
+.sponsor-benefit-note {
+  margin-top: 20px;
+  font: 400 14px 'Inter';
+  color: var(--ink-500);
+  line-height: 1.6;
+  max-width: 720px;
+}
 .sponsor-cta-card {
   background: var(--shpe-navy);
   color: #fff;
@@ -1600,9 +1654,12 @@ h1, h2, h3, h4 {
   .shpe-hero-side { max-width: 400px; }
   .contact-split { grid-template-columns: 1fr; gap: 48px; }
   .sponsor-hero-stats { grid-template-columns: repeat(2,1fr); }
-  .sponsor-benefits { grid-template-columns: 1fr; }
-  .sponsor-benefit-h, .sponsor-benefit-cell { display: none; }
-  .sponsor-benefit-cell:first-child { display: block; }
+  /* Tighten the tracks rather than hiding tier columns: the matrix keeps every
+     column and pans sideways inside .sponsor-benefits-scroll. */
+  .sponsor-benefits { --label-col: 220px; --tier-col: 104px; }
+  .sponsor-benefit-h { padding: 14px 10px; font-size: 11px; letter-spacing: 0.05em; }
+  .sponsor-benefit-cell { padding: 13px 10px; min-height: 50px; font-size: 13px; }
+  .sponsor-benefit-cell.is-label { padding: 13px 16px; }
 }
 @media (max-width: 900px) {
   .pillar-grid { grid-template-columns: 1fr; }
