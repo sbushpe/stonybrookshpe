@@ -24,7 +24,9 @@ approval before writing code. Code quality is the priority, not speed.
 
 ## Facts that prevent common mistakes
 
-- PRs target **`phase-one-local`** (the main branch). Feature branches are kebab-case.
+- PRs target **`main`**, the published branch GitHub Pages deploys from. Feature branches
+  are kebab-case. (`phase-one-local` was the published branch until August 2026 - older
+  PRs and docs reference it; it is retired.)
 - Nav and footer are duplicated across every root `*.html` **by design** — editing them means
   updating every page in the same commit.
 - One stylesheet: `css/shpe-design.css`. One shared script: `js/shpe.js`. No per-page CSS,

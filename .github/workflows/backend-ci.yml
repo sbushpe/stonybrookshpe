@@ -5,12 +5,12 @@ name: Backend CI
 
 on:
   pull_request:
-    branches: [phase-one-local]
+    branches: [main]
     paths:
       - 'backend/**'
       - '.github/workflows/backend-ci.yml'
   push:
-    branches: [phase-one-local]
+    branches: [main]
     paths:
       - 'backend/**'
       - '.github/workflows/backend-ci.yml'

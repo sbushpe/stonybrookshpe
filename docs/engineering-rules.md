@@ -348,7 +348,9 @@ Pragmatic pyramid — this is a small team, so tests go where bugs are expensive
 ## 10. Git & collaboration
 
 - Branch per change, kebab-case, named for the change: `member-sponsor-portals`,
-  `resume-upload-api`. PRs target **`phase-one-local`**.
+  `resume-upload-api`. PRs target **`main`**, the published branch GitHub Pages deploys
+  from. (`phase-one-local` held that role until August 2026 and is retired - anything
+  still naming it is out of date.)
 - Commits are small and single-purpose, imperative mood: "Add resume upload validation",
   not "misc fixes" / "wip".
 - One concern per PR. A feature PR does not also reformat files or upgrade dependencies.
