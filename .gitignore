@@ -1,2 +1,14 @@
-
 media/eboard-members/.DS_Store
+
+# --- Backend (Python) ---
+backend/.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets. The committed contract is backend/.env.example.
+.env
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

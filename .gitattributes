@@ -1,0 +1,13 @@
+# We develop on Windows and deploy to Linux; normalize line endings so diffs stay
+# readable (engineering-rules.md §10).
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
