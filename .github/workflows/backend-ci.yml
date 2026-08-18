@@ -1,0 +1,51 @@
+# The three checks docs/backend-setup.md tells you to run locally, enforced on every PR.
+# ADR 001 stakes the backend's type safety on mypy passing, which only means something
+# if something other than a person's memory runs it.
+name: Backend CI
+
+on:
+  pull_request:
+    branches: [phase-one-local]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+  push:
+    branches: [phase-one-local]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/backend-ci.yml'
+
+jobs:
+  checks:
+    name: lint, types, tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          # Matches the version in docs/backend-setup.md. Bump both together.
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: backend/requirements-dev.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Lint
+        run: python -m ruff check .
+
+      - name: Check formatting
+        run: python -m ruff format --check .
+
+      - name: Type check
+        run: python -m mypy app tests
+
+      # The test suite supplies its own environment (tests/conftest.py), so CI needs
+      # no secrets and cannot be made to leak any.
+      - name: Tests
+        run: python -m pytest
