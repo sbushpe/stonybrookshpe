@@ -50,19 +50,19 @@
 
       <div class="sponsor-hero-stats">
         <div class="reveal reveal-1">
-          <div class="sponsor-stat-num">120<sup>+</sup></div>
-          <div class="sponsor-stat-label">Active chapter members</div>
+          <div class="sponsor-stat-num">400<sup>+</sup></div>
+          <div class="sponsor-stat-label">chapter members</div>
         </div>
         <div class="reveal reveal-2">
           <div class="sponsor-stat-num">30</div>
           <div class="sponsor-stat-label">Years on campus</div>
         </div>
         <div class="reveal reveal-3">
-          <div class="sponsor-stat-num">14</div>
-          <div class="sponsor-stat-label">Events per semester</div>
+          <div class="sponsor-stat-num">30</div>
+          <div class="sponsor-stat-label">Events per academic year</div>
         </div>
         <div class="reveal reveal-4">
-          <div class="sponsor-stat-num">9</div>
+          <div class="sponsor-stat-num">10<sup>+</sup></div>
           <div class="sponsor-stat-label">Engineering disciplines represented</div>
         </div>
       </div>
@@ -73,16 +73,17 @@
   <section class="section container">
     <div class="section-head-split">
       <div>
-        <div class="eyebrow">Our Partners</div>
+        <!--<div class="eyebrow">Our Partners</div>-->
         <h2 class="display-l" style="margin-top:18px">
-          Thank you to the<br>
-          companies <em class="serif-italic">backing</em> us.
+          Thank you to those who<br>
+          <em class="serif-italic">believe</em> in us.
         </h2>
       </div>
-      <div class="section-head-right">
+      <!--<div class="section-head-right">
         From Fortune 500 sponsors to the Undergraduate Student Government, every
         partner helps us keep events free and accessible to every member.
       </div>
+    -->
     </div>
 
     <!--
@@ -172,42 +173,131 @@
         </div>
       </div>
 
-      <div class="sponsor-benefits">
-        <div class="sponsor-benefit-h" style="text-align:left">Benefit</div>
-        <div class="sponsor-benefit-h">Bronze<br><span style="font-size:11px;opacity:.7;font-weight:400">$150</span></div>
-        <div class="sponsor-benefit-h">Silver<br><span style="font-size:11px;opacity:.7;font-weight:400">$250</span></div>
-        <div class="sponsor-benefit-h">Gold<br><span style="font-size:11px;opacity:.7;font-weight:400">$400+</span></div>
+      <!--
+        Tiers, prices and benefits mirror the "Sponsorship Tiers" table on
+        page 8 of media/proposal/26-27-proposal.pdf. Tiers are cumulative there
+        ("All Silver benefits, plus..."), so each benefit is checked from the
+        tier it unlocks at all the way across to Platinum.
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">Logo on SHPE website</div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+        ADDING OR REMOVING A TIER: update --tiers on .sponsor-benefits below to
+        the new tier count, add the matching .sponsor-benefit-h header cell, and
+        add one cell per benefit row. The column widths, the label column and
+        the mobile min-width all derive from --tiers, so nothing else changes.
+      -->
+      <div class="sponsor-benefits-scroll">
+        <div class="sponsor-benefits" style="--tiers:5">
+          <div class="sponsor-benefit-h is-label">Benefit</div>
+          <div class="sponsor-benefit-h">Community Partner<span class="sponsor-benefit-price">$100&ndash;$249</span></div>
+          <div class="sponsor-benefit-h">Bronze<span class="sponsor-benefit-price">$250</span></div>
+          <div class="sponsor-benefit-h">Silver<span class="sponsor-benefit-price">$750</span></div>
+          <div class="sponsor-benefit-h">Gold<span class="sponsor-benefit-price">$1,500+</span></div>
+          <div class="sponsor-benefit-h">Platinum<span class="sponsor-benefit-price">$2,500+</span></div>
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">HHM Career Expo: dedicated table &amp; registration</div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+          <div class="sponsor-benefit-cell is-label">Logo on chapter website</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">Logo on official SHPE apparel</div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+          <div class="sponsor-benefit-cell is-label">Listing in chapter newsletter</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">Workshop host: professional development session</div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+          <div class="sponsor-benefit-cell is-label">Mid-year and end-of-year impact report</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">SHPE Resume Book access</div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+          <div class="sponsor-benefit-cell is-label">Logo on official chapter apparel</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
 
-        <div class="sponsor-benefit-cell" style="text-align:left;font-weight:500;color:var(--ink-700)">Priority table placement at Career Expo</div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"></div>
-        <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">✓</span></div>
+          <div class="sponsor-benefit-cell is-label">GBM info table or panel seat</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Chapter newsletter feature mention</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Resume Book access</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Company spotlight post</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Banquet recognition</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Workshop / career panel hosting opportunity</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Named scholarship option</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Exclusive recruitment dinner hosting</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Priority event hosting</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+
+          <div class="sponsor-benefit-cell is-label">Dedicated member email blast</div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-dash">&ndash;</span></div>
+          <div class="sponsor-benefit-cell"><span class="sponsor-benefit-check">&#10003;</span></div>
+        </div>
       </div>
+
+      <p class="sponsor-benefit-note">
+        Sponsoring a single event instead of a full year? National Convention
+        sponsorship runs $300&ndash;$900 per student and can be added to any tier
+        or purchased on its own. Email us for event-only options.
+      </p>
     </div>
   </section>
 

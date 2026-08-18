@@ -60,11 +60,44 @@ The tier grid uses these existing classes from `css/shpe-design.css`:
 | `.sponsor-ph` | "Sponsor slot available" placeholder card |
 | `.sponsor-ph-accent` | Orange "available" emphasis text |
 
-The tier price points (shown on the benefits table further down the page) are:
+The tier price points (shown on the benefits table further down the page) come
+from page 8 of `media/proposal/26-27-proposal.pdf`:
 
-- **Bronze** — $150
-- **Silver** — $250
-- **Gold** — $400+
+- **Community Partner** — $100–$249
+- **Bronze** — $250
+- **Silver** — $750
+- **Gold** — $1,500+
+- **Platinum** — $2,500+
+
+Tiers are cumulative in the proposal — each level is described as "All
+&lt;previous tier&gt; benefits, plus…" — so in the benefits matrix a benefit is
+checked from the tier it unlocks at all the way across to Platinum. Cells below
+that point use `.sponsor-benefit-dash` rather than being left empty.
+
+### Adding or removing a tier
+
+The matrix is sized from CSS custom properties, so a new tier is a markup-only
+change — **do not edit the grid CSS**:
+
+1. Bump `--tiers` in the inline style on `.sponsor-benefits` in
+   [sponsor-us.html](../sponsor-us.html) to the new tier count.
+2. Add a `.sponsor-benefit-h` header cell (name + a `.sponsor-benefit-price`
+   span) in the correct left-to-right price order.
+3. Add one `.sponsor-benefit-cell` to **every** benefit row, in the same
+   position. Each row must end up with `--tiers` + 1 cells or the grid shifts.
+
+`grid-template-columns` and the table's `min-width` are both derived from
+`--tiers` and `--tier-col`, so column widths and the mobile scroll threshold
+update on their own. Verified by adding a test 6th tier: 7 columns and a
+1092px min-width, with no stylesheet change.
+
+The benefit-name cells carry an explicit `.is-label` class rather than relying
+on an `:nth-child` position rule, so they keep working at any tier count.
+
+Note the logo grid above still uses only three tier labels (`Gold Partner`,
+`Silver Sponsor`, `Bronze Friend`) and predates the 5-tier structure. If the
+grid is ever re-enabled, add `Platinum` and `Community Partner` rows so it
+matches the benefits table.
 
 If those change, also update `<!-- BENEFITS TABLE -->` in `sponsor-us.html`
 and the proposal PDF in `media/proposal/`.
