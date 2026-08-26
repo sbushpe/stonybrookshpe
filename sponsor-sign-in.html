@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to the Stony Brook SHPE sponsor portal, or request an account with your work email and company.">
+  <title>Sponsor Sign In — Stony Brook SHPE</title>
+  <link rel="icon" href="media/icon.PNG">
+  <link rel="stylesheet" href="css/shpe-design.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="shpe-nav">
+    <div class="shpe-nav-inner">
+      <a href="index.html" class="shpe-nav-brand">
+        <img src="media/shpe-logo-transparent.png" alt="SHPE" class="shpe-nav-mark">
+        <span class="shpe-nav-divider-line">|</span>
+        <span class="shpe-nav-wordtext">Stony Brook University</span>
+      </a>
+      <button class="shpe-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="shpe-nav-links">
+        <a href="index.html" class="shpe-nav-link">Home</a>
+        <a href="testimonials.html" class="shpe-nav-link">Testimonials</a>
+        <a href="events.html" class="shpe-nav-link">Events</a>
+        <a href="member-portal.html" class="shpe-nav-link">Member Portal</a>
+        <a href="sponsor-portal.html" class="shpe-nav-link is-active">Sponsor Portal</a>
+        <a href="sponsor-us.html" class="shpe-nav-link">Sponsor Us</a>
+        <a href="contact-us.html" class="shpe-nav-cta">Contact Us →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="page-header-glow"></div>
+    <div class="container">
+      <div class="eyebrow">Sponsor Access · Design Preview</div>
+      <h1 class="display-xl" style="margin-top:18px">
+        Sponsor <em class="serif-italic">access.</em>
+      </h1>
+      <p class="page-header-sub">
+        Sign in to browse the resume book, see who the chapter is, and reach
+        students before the career fair does.
+      </p>
+    </div>
+  </section>
+
+  <!-- SIGN IN / SIGN UP -->
+  <section class="container contact-split" style="padding-top:80px">
+
+    <div class="contact-form-card auth-form">
+      <div class="auth-switch" role="tablist" aria-label="Sponsor access mode">
+        <button type="button" class="auth-switch-btn is-active" role="tab"
+                id="sponsor-signin-tab" aria-controls="sponsor-signin-panel" aria-selected="true">
+          Sign In
+        </button>
+        <button type="button" class="auth-switch-btn" role="tab"
+                id="sponsor-signup-tab" aria-controls="sponsor-signup-panel" aria-selected="false">
+          Request Access
+        </button>
+      </div>
+
+      <!-- Sign in -->
+      <form class="auth-panel is-active" id="sponsor-signin-panel"
+            role="tabpanel" aria-labelledby="sponsor-signin-tab">
+        <h2 class="contact-form-h">Sign in</h2>
+        <p class="contact-form-note">
+          We email you a one-time link. No password to circulate around the office
+          when someone new picks up recruiting.
+        </p>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="sponsor-signin-email">Work email *</label>
+          <input class="contact-field-input" id="sponsor-signin-email" name="email"
+                 type="email" autocomplete="email"
+                 placeholder="you@company.com" required>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          Email Me A Sign-In Link <span class="btn-arrow">→</span>
+        </button>
+        <p class="auth-status" role="status" aria-live="polite"></p>
+
+        <div class="portal-note on-dark" style="margin-top:24px">
+          The link works once and expires after 15 minutes. What you can open
+          inside follows your company's current tier.
+        </div>
+      </form>
+
+      <!-- Request access -->
+      <form class="auth-panel" id="sponsor-signup-panel"
+            role="tabpanel" aria-labelledby="sponsor-signup-tab">
+        <h2 class="contact-form-h">Request access</h2>
+        <p class="contact-form-note">
+          Every field is required. The e-board matches your company against the
+          current sponsorship record before access opens.
+        </p>
+
+        <div class="contact-field">
+          <label class="contact-field-label" for="sponsor-signup-name">Full name *</label>
+          <input class="contact-field-input" id="sponsor-signup-name" name="name"
+                 type="text" autocomplete="name" placeholder="Alex Rivera" required>
+        </div>
+
+        <div class="contact-field-row">
+          <div class="contact-field">
+            <label class="contact-field-label" for="sponsor-signup-email">Work email *</label>
+            <input class="contact-field-input" id="sponsor-signup-email" name="email"
+                   type="email" autocomplete="email" placeholder="you@company.com" required>
+          </div>
+          <div class="contact-field">
+            <label class="contact-field-label" for="sponsor-signup-company">Company *</label>
+            <input class="contact-field-input" id="sponsor-signup-company" name="company"
+                   type="text" autocomplete="organization" placeholder="Acme Energy" required>
+          </div>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          Request My Access <span class="btn-arrow">→</span>
+        </button>
+        <p class="auth-status" role="status" aria-live="polite"></p>
+
+        <div class="portal-note on-dark" style="margin-top:24px">
+          Not a sponsor yet? Start at
+          <a href="sponsor-us.html" style="color:var(--shpe-orange-300);text-decoration:underline">Sponsor Us</a>
+          and pick a tier. We will have you in the portal once it is signed.
+        </div>
+      </form>
+    </div>
+
+    <div class="contact-side reveal reveal-2">
+      <div class="contact-side-label">What you unlock</div>
+      <h3 class="contact-side-h">The pipeline, <em>early.</em></h3>
+      <p class="contact-side-body">
+        One hundred and twenty engineers who already show up for workshops and
+        panels, visible to you before anyone lines up at a career fair booth.
+      </p>
+
+      <ul class="portal-checks">
+        <li>The resume book, filtered by major and class year</li>
+        <li>Chapter demographics in aggregate, never per student</li>
+        <li>Event slots your tier includes, booked from the portal</li>
+        <li>Your sponsorship term and renewal date at a glance</li>
+      </ul>
+
+      <div class="portal-note" style="margin-top:32px">
+        Every resume in the book belongs to a member who opted in. Downloads are
+        logged, and access ends when a sponsorship does.
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THE LINK WORKS -->
+  <section class="section-compact section-tinted">
+    <div class="container">
+      <div class="section-head-split">
+        <div class="reveal">
+          <div class="eyebrow">No Passwords</div>
+          <h2 class="display-l" style="margin-top:18px">
+            How you get <em class="serif-italic">in.</em>
+          </h2>
+        </div>
+        <div class="section-head-right reveal reveal-2">
+          Recruiting teams change hands mid-season. A link tied to a work address
+          beats a shared password nobody remembers setting.
+        </div>
+      </div>
+
+      <div class="pillar-grid">
+        <div class="pillar-card reveal reveal-1">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">Type it</div>
+          <p class="pillar-body">Enter the work email on your sponsorship record. That address is the account, so use the same one every time.</p>
+        </div>
+        <div class="pillar-card reveal reveal-2">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">Check mail</div>
+          <p class="pillar-body">A one-time link lands in your inbox within a minute. It works once, then it is dead.</p>
+        </div>
+        <div class="pillar-card reveal reveal-3">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">You're in</div>
+          <p class="pillar-body">The link opens the portal at your tier and keeps you signed in on that device until you sign out.</p>
+        </div>
+      </div>
+
+      <div class="portal-note" style="margin-top:40px">
+        Need a second recruiter on the account, or a colleague removed? Reach the
+        e-board through Contact Us and we will handle it the same week.
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="shpe-footer">
+    <div class="shpe-footer-inner">
+      <a href="index.html" class="shpe-footer-brand">
+        <img src="media/shpe-logo-transparent.png" alt="SHPE" class="shpe-footer-mark">
+        <span class="shpe-footer-divider-line">|</span>
+        <span class="shpe-footer-wordtext">Stony Brook University</span>
+      </a>
+      <nav class="shpe-footer-nav">
+        <a href="index.html" class="shpe-footer-link">Home</a>
+        <a href="testimonials.html" class="shpe-footer-link">Testimonials</a>
+        <a href="events.html" class="shpe-footer-link">Events</a>
+        <a href="sponsor-us.html" class="shpe-footer-link">Sponsor Us</a>
+        <a href="contact-us.html" class="shpe-footer-link">Contact Us</a>
+        <a href="https://shpe.org/" target="_blank" rel="noopener" class="shpe-footer-link">National SHPE</a>
+      </nav>
+    </div>
+    <div class="shpe-footer-rule"></div>
+    <div class="shpe-footer-legal">
+      <div>© 2026 SHPE Stony Brook · Society of Hispanic Professional Engineers</div>
+      <div class="social-chips on-dark">
+        <a href="https://www.youtube.com/channel/UC4ZKTRm4mI8-H77zAZaNckg" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="media/icons/youtube.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/stonybrookshpe/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="media/icons/instagram.svg" alt="">
+        </a>
+        <a href="https://www.linkedin.com/company/shpe-at-stony-brook-university/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="media/icons/linkedin.svg" alt="">
+        </a>
+        <a href="https://www.facebook.com/stonybrookshpe/" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="media/icons/facebook.svg" alt="">
+        </a>
+        <a href="https://twitter.com/stonybrookshpe" target="_blank" rel="noopener" aria-label="X">
+          <img src="media/icons/x.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shpe.js" defer></script>
+</body>
+</html>

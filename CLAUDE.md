@@ -3,7 +3,8 @@
 Chapter website for the Society of Hispanic Professional Engineers at Stony Brook University.
 The site is static (vanilla HTML/CSS/JS, GitHub Pages, no build step). The backend that will
 power the member and sponsor portals lives in `backend/` (Python 3.13 + FastAPI + Supabase) -
-`member-portal.html` and `sponsor-portal.html` are still static design previews of it.
+`member-portal.html`, `sponsor-portal.html`, and the two sign-in pages
+(`member-sign-in.html`, `sponsor-sign-in.html`) are still static design previews of it.
 
 ## The two rulebooks — read before working
 

@@ -217,9 +217,15 @@ footer.**
 - **`.portal-*` controls** — `.portal-dropzone` + `.portal-file` (resume upload), `.portal-toggle` (opt-in switch, `.is-on`),
   `.portal-tag` / `.tier-badge` (status pills), `.portal-id-chip` (signed-in identity on
   navy), `.portal-filters` (filter pills), `.portal-checks` (benefit checklist),
-  `.portal-note` (orange-rule footnote). Introduced by `member-portal.html` and
-  `sponsor-portal.html`; those two pages are design previews and are deliberately **not**
-  linked from the nav/footer until the portals are real.
+  `.portal-note` (orange-rule footnote; add `.on-dark` for the white-on-navy variant).
+  Introduced by `member-portal.html` and `sponsor-portal.html`, which are design previews
+  of the real portals.
+- **`.auth-switch` / `.auth-panel`** — the sign-in / sign-up mode switch inside a
+  `.contact-form-card.auth-form`: a segmented pill tablist on navy (active segment fills
+  orange) over two `.auth-panel` forms, one `.is-active` at a time. The panels render
+  **stacked** until `shpe.js` adds `.is-enhanced` to the card, so sign-up is still
+  reachable when JS never loads. `.auth-status` is the `aria-live` line under a submit
+  button. Introduced by `member-sign-in.html` and `sponsor-sign-in.html`.
 
 ### 5.5 Forms
 
@@ -320,7 +326,11 @@ without reason:
    accent word.
 4. Build the body from existing sections/components; alternate section backgrounds; sprinkle
    `.reveal` staggering.
-5. Add the page link to the nav and footer of **all** other root pages.
+5. Add the page link to the nav and footer of **all** other root pages. Exception:
+   a *flow* page (sign-in, sign-up, anything you enter from one place and leave again)
+   is linked from the page that owns the flow, not from the global nav, which is
+   reserved for destinations. `member-sign-in.html` and `sponsor-sign-in.html` are
+   reached from their portal's Sign Out button.
 6. Check 1280px, ~1000px, ~900px (hamburger), and ~375px widths.
 
 **New component**

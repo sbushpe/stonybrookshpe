@@ -2052,6 +2052,65 @@ h1, h2, h3, h4 {
   .portal-toggle-switch, .portal-toggle-switch::after { transition: none; }
 }
 
+/* ===== AUTH (sign-in / sign-up pages) ===== */
+/* The card renders both panels stacked until shpe.js marks it enhanced, so a
+   visitor whose JS never loads can still reach sign-up, not just sign-in. */
+.auth-switch {
+  display: none;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 32px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 999px;
+  position: relative;
+}
+.auth-form.is-enhanced .auth-switch { display: flex; }
+.auth-switch-btn {
+  flex: 1;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  font: 700 12px 'Inter';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  cursor: pointer;
+  transition: background 300ms var(--ease-out-expo), color 300ms var(--ease-out-expo);
+}
+.auth-switch-btn:hover { color: #fff; }
+.auth-switch-btn:focus-visible { outline: 2px solid var(--shpe-orange); outline-offset: 2px; }
+.auth-switch-btn.is-active { background: var(--shpe-orange); color: #fff; }
+
+.auth-panel { position: relative; }
+.auth-panel + .auth-panel {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+.auth-form.is-enhanced .auth-panel { display: none; }
+.auth-form.is-enhanced .auth-panel.is-active { display: block; }
+.auth-form.is-enhanced .auth-panel + .auth-panel {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.auth-status {
+  font: 400 13px 'Inter';
+  line-height: 1.6;
+  color: var(--shpe-orange-300);
+  margin: 16px 0 0;
+  min-height: 1.6em;
+}
+
+.portal-note.on-dark { color: rgba(255,255,255,.7); }
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-switch-btn { transition: none; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1100px) {
   .eboard-grid { grid-template-columns: repeat(3,1fr); }

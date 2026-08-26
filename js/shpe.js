@@ -91,6 +91,53 @@
       });
     });
 
+    // ── Auth mode switch (sign in / create account) ───────────
+    document.querySelectorAll('.auth-form').forEach((card) => {
+      const tabs = Array.from(card.querySelectorAll('.auth-switch-btn'));
+      const panels = card.querySelectorAll('.auth-panel');
+      if (!tabs.length || !panels.length) return;
+
+      // Until this class lands the panels render stacked, so the page degrades
+      // to a usable form rather than hiding sign-up behind a dead button.
+      card.classList.add('is-enhanced');
+
+      function select(tab) {
+        tabs.forEach((other) => {
+          const isActive = other === tab;
+          other.classList.toggle('is-active', isActive);
+          other.setAttribute('aria-selected', String(isActive));
+          other.tabIndex = isActive ? 0 : -1;
+        });
+        const panelId = tab.getAttribute('aria-controls');
+        panels.forEach((panel) => {
+          panel.classList.toggle('is-active', panel.id === panelId);
+        });
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.tabIndex = tab.classList.contains('is-active') ? 0 : -1;
+        tab.addEventListener('click', () => select(tab));
+        tab.addEventListener('keydown', (e) => {
+          if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+          const step = e.key === 'ArrowRight' ? 1 : -1;
+          const next = tabs[(index + step + tabs.length) % tabs.length];
+          select(next);
+          next.focus();
+        });
+      });
+    });
+
+    // ── Auth forms: required fields validate, nothing is sent yet ──
+    document.querySelectorAll('.auth-panel').forEach((form) => {
+      const status = form.querySelector('.auth-status');
+      if (!status) return;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        status.textContent =
+          'Design preview: accounts are not connected yet, so nothing was sent.';
+      });
+    });
+
     // ── Contact form submit handler ──────────────────────────
     const form = document.getElementById('shpe-contact-form');
     if (form) {
