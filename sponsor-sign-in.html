@@ -68,8 +68,7 @@
             role="tabpanel" aria-labelledby="sponsor-signin-tab">
         <h2 class="contact-form-h">Sign in</h2>
         <p class="contact-form-note">
-          We email you a one-time link. No password to circulate around the office
-          when someone new picks up recruiting.
+          We email you a one-time link to confirm legitimacy
         </p>
 
         <div class="contact-field">
@@ -99,10 +98,17 @@
           current sponsorship record before access opens.
         </p>
 
-        <div class="contact-field">
-          <label class="contact-field-label" for="sponsor-signup-name">Full name *</label>
-          <input class="contact-field-input" id="sponsor-signup-name" name="name"
-                 type="text" autocomplete="name" placeholder="Alex Rivera" required>
+        <div class="contact-field-row">
+          <div class="contact-field">
+            <label class="contact-field-label" for="sponsor-signup-first-name">First name *</label>
+            <input class="contact-field-input" id="sponsor-signup-first-name" name="firstName"
+                   type="text" autocomplete="given-name" placeholder="first" required>
+          </div>
+          <div class="contact-field">
+            <label class="contact-field-label" for="sponsor-signup-last-name">Last name *</label>
+            <input class="contact-field-input" id="sponsor-signup-last-name" name="lastName"
+                   type="text" autocomplete="family-name" placeholder="last" required>
+          </div>
         </div>
 
         <div class="contact-field-row">
@@ -114,7 +120,7 @@
           <div class="contact-field">
             <label class="contact-field-label" for="sponsor-signup-company">Company *</label>
             <input class="contact-field-input" id="sponsor-signup-company" name="company"
-                   type="text" autocomplete="organization" placeholder="Acme Energy" required>
+                   type="text" autocomplete="organization" placeholder="Example Inc." required>
           </div>
         </div>
 
@@ -135,21 +141,17 @@
       <div class="contact-side-label">What you unlock</div>
       <h3 class="contact-side-h">The pipeline, <em>early.</em></h3>
       <p class="contact-side-body">
-        One hundred and twenty engineers who already show up for workshops and
+        Students who already show up for workshops and
         panels, visible to you before anyone lines up at a career fair booth.
       </p>
 
       <ul class="portal-checks">
         <li>The resume book, filtered by major and class year</li>
-        <li>Chapter demographics in aggregate, never per student</li>
+        <li>Chapter demographics in aggregate of our chapter</li>
         <li>Event slots your tier includes, booked from the portal</li>
-        <li>Your sponsorship term and renewal date at a glance</li>
       </ul>
 
-      <div class="portal-note" style="margin-top:32px">
-        Every resume in the book belongs to a member who opted in. Downloads are
-        logged, and access ends when a sponsorship does.
-      </div>
+      
     </div>
   </section>
 
@@ -158,15 +160,12 @@
     <div class="container">
       <div class="section-head-split">
         <div class="reveal">
-          <div class="eyebrow">No Passwords</div>
+          
           <h2 class="display-l" style="margin-top:18px">
             How you get <em class="serif-italic">in.</em>
           </h2>
         </div>
-        <div class="section-head-right reveal reveal-2">
-          Recruiting teams change hands mid-season. A link tied to a work address
-          beats a shared password nobody remembers setting.
-        </div>
+        
       </div>
 
       <div class="pillar-grid">
