@@ -204,16 +204,17 @@ footer.**
 - **`.contact-social-link`** — oversized Anton link rows with the same orange wipe-fill
   hover. For link lists that deserve drama.
 - **`.portal-stat`** — white tile: micro-label + Anton number (`sup` for units/denominators),
-  lifts on hover. For dashboard stats on light surfaces (portal pages).
+  lifts on hover. For dashboard stats on light surfaces (portal pages). Sits in
+  `.portal-stat-grid` (4-up); add `.portal-stat-grid-3` for a three-tile row so it fills
+  the width instead of leaving a dead column. Both drop to 2-up, then 1-up, on narrow.
 - **`.book-row`** — resume-book row (avatar, name + major, class, tag, download link) with
   the same navy wipe-fill hover as `.event-row`. Wrap ghost rows in `.portal-lock` +
   `.portal-lock-overlay` for tier-gated states.
 - **`.chart-card` / `.bar-list`** — CSS-only horizontal bar chart: navy fills on a
   navy-tinted track, values right-aligned in ink tokens, bar widths via an inline `--w`
-  custom property. Bars (and `.portal-meter-fill`) grow in when the card's `.reveal`
-  becomes visible; static under reduced motion.
-- **`.portal-*` controls** — `.portal-meter` (progress bar), `.portal-dropzone` +
-  `.portal-file` (resume upload), `.portal-toggle` (opt-in switch, `.is-on`),
+  custom property. Bars grow in when the card's `.reveal` becomes visible; static
+  under reduced motion.
+- **`.portal-*` controls** — `.portal-dropzone` + `.portal-file` (resume upload), `.portal-toggle` (opt-in switch, `.is-on`),
   `.portal-tag` / `.tier-badge` (status pills), `.portal-id-chip` (signed-in identity on
   navy), `.portal-filters` (filter pills), `.portal-checks` (benefit checklist),
   `.portal-note` (orange-rule footnote). Introduced by `member-portal.html` and

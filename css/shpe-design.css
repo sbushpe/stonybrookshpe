@@ -1686,6 +1686,7 @@ h1, h2, h3, h4 {
 }
 
 .portal-stat-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.portal-stat-grid-3 { grid-template-columns: repeat(3,1fr); }
 .portal-stat {
   background: var(--paper);
   border: 1px solid var(--ink-100);
@@ -1742,30 +1743,6 @@ h1, h2, h3, h4 {
   padding-left: 14px;
   border-left: 2px solid var(--shpe-orange);
   max-width: 52ch;
-}
-
-.portal-meter { margin-top: 20px; }
-.portal-meter-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 10px;
-}
-.portal-meter-label { font: 600 13px 'Inter'; color: var(--ink-700); }
-.portal-meter-val { font: 700 13px 'Inter'; color: var(--shpe-navy); font-variant-numeric: tabular-nums; }
-.portal-meter-track {
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(0,31,91,.08);
-  overflow: hidden;
-}
-.portal-meter-fill {
-  height: 100%;
-  border-radius: 999px;
-  background: var(--shpe-navy);
-  width: var(--w, 0%);
-  transition: width 900ms var(--ease-out-expo) 150ms;
 }
 
 .portal-dropzone {
@@ -2060,15 +2037,13 @@ h1, h2, h3, h4 {
   transition: width 900ms var(--ease-out-expo) 150ms;
 }
 
-/* Bars and meters grow in with the section's scroll reveal */
-.reveal .bar-fill,
-.reveal .portal-meter-fill { width: 0; }
-.reveal.is-visible .bar-fill,
-.reveal.is-visible .portal-meter-fill { width: var(--w, 0%); }
+/* Bars grow in with the section's scroll reveal */
+.reveal .bar-fill { width: 0; }
+.reveal.is-visible .bar-fill { width: var(--w, 0%); }
 
 @media (prefers-reduced-motion: reduce) {
-  .bar-fill, .portal-meter-fill,
-  .reveal .bar-fill, .reveal .portal-meter-fill {
+  .bar-fill,
+  .reveal .bar-fill {
     transition: none;
     width: var(--w, 0%);
   }

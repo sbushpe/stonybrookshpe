@@ -72,48 +72,26 @@
         </h2>
       </div>
       <div class="section-head-right reveal reveal-2">
-        Attendance is counted automatically every time you check in. Hit the
-        semester requirement and your resume joins the sponsor resume book.
+        Attendance is counted automatically every time you check in. Your
+        check-in history and profile stay up to date without any extra steps.
       </div>
     </div>
 
-    <div class="portal-stat-grid">
+    <div class="portal-stat-grid portal-stat-grid-3">
       <div class="portal-stat reveal reveal-1">
         <div class="portal-stat-label">Meetings Attended</div>
-        <div class="portal-stat-value">4<sup>/6</sup></div>
-        <div class="portal-stat-sub">Fall 2026 requirement</div>
+        <div class="portal-stat-value">4</div>
+        <div class="portal-stat-sub">Fall 2026 semester</div>
       </div>
       <div class="portal-stat reveal reveal-2">
-        <div class="portal-stat-label">Meetings To Go</div>
-        <div class="portal-stat-value">2</div>
-        <div class="portal-stat-sub">Until resume book eligibility</div>
-      </div>
-      <div class="portal-stat reveal reveal-3">
         <div class="portal-stat-label">Profile Complete</div>
         <div class="portal-stat-value">80<sup>%</sup></div>
         <div class="portal-stat-sub">2 fields left to fill</div>
       </div>
-      <div class="portal-stat reveal reveal-4">
+      <div class="portal-stat reveal reveal-3">
         <div class="portal-stat-label">Resume Status</div>
         <div class="portal-stat-value">On file</div>
         <div class="portal-stat-sub">Updated Jun 30, 2026</div>
-      </div>
-    </div>
-
-    <div class="portal-card reveal reveal-2" style="margin-top:16px">
-      <div class="portal-card-h">Resume book eligibility</div>
-      <p class="portal-card-note" style="margin:0">
-        Attend 6 general body meetings this semester and your resume becomes visible
-        to sponsors in the resume book. You are 2 meetings away.
-      </p>
-      <div class="portal-meter">
-        <div class="portal-meter-head">
-          <span class="portal-meter-label">Fall 2026 progress</span>
-          <span class="portal-meter-val">4 of 6 meetings</span>
-        </div>
-        <div class="portal-meter-track">
-          <div class="portal-meter-fill" style="--w:66.7%"></div>
-        </div>
       </div>
     </div>
   </section>
@@ -279,236 +257,236 @@
     </div>
   </section>
 
-  <!-- RESUME -->
+  <!-- PROFILE -->
   <section class="section section-cream">
     <div class="container">
       <div class="section-head-split">
         <div class="reveal">
-          <div class="eyebrow">Resume Book</div>
+          <div class="eyebrow">Your Profile</div>
           <h2 class="display-l" style="margin-top:18px">
-            Your resume, <em class="serif-italic">your</em> call.
+            Tell us <em class="serif-italic">who</em> you are.
           </h2>
         </div>
         <div class="section-head-right reveal reveal-2">
-          Upload once, update whenever. You choose whether it appears in the
-          sponsor resume book, and you can pull it at any time.
+          These answers roll up into the chapter-wide numbers sponsors see. Never
+          your name, never your file, always the whole familia at once.
         </div>
       </div>
 
       <div class="contact-split" style="padding-top:0">
-        <div class="portal-card reveal">
-          <div class="portal-card-h">Upload your resume</div>
-          <p class="portal-card-note">PDF only, up to 5 MB. One file per member, new uploads replace the old one.</p>
+        <form class="contact-form-card reveal">
+          <h3 class="contact-form-h">About you</h3>
+          <p class="contact-form-note">Every field is optional and editable. Answer what you're comfortable with.</p>
 
-          <div class="portal-dropzone">
-            <div class="portal-dropzone-glyph">↑</div>
-            <div class="portal-dropzone-title">Drag your resume here</div>
-            <div class="portal-dropzone-sub">or</div>
-            <a href="#" class="btn btn-outline" style="margin-top:14px">Browse Files</a>
-          </div>
-
-          <div class="portal-file">
-            <div class="portal-file-icon">PDF</div>
-            <div>
-              <div class="portal-file-name">MarisolVega_Resume.pdf</div>
-              <div class="portal-file-meta">Uploaded Jun 30, 2026 · 212 KB</div>
+          <div class="contact-field-row">
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-hometown">Hometown</label>
+              <input class="contact-field-input" id="profile-hometown" name="hometown" type="text" value="Brentwood, NY">
             </div>
-            <div class="portal-file-actions">
-              <a href="#" class="btn-text">Replace</a>
-              <a href="#" class="btn-text">Remove</a>
-            </div>
-          </div>
-
-          <div class="portal-toggle">
-            <span class="portal-toggle-switch is-on" role="switch" aria-checked="true" tabindex="0" aria-label="Include my resume in the sponsor resume book"></span>
-            <div>
-              <div class="portal-toggle-label">Include me in the sponsor resume book</div>
-              <div class="portal-toggle-sub">
-                Goes live once you reach 6 meetings this semester. Turn it off and your
-                resume disappears from the book immediately.
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-major-btn">Major</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-major-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Computer Science</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Computer Science</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Mechanical Engineering</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Electrical Engineering</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Applied Math &amp; Statistics</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Other STEM</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+
+          <div class="contact-field-row">
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-year-btn">Class year</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-year-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Class of 2027</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2030</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2029</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2028</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Class of 2027</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-level-btn">Level</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-level-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Undergraduate</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Undergraduate</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Graduate</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-field-row">
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-ethnicity-btn">Ethnic background</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-ethnicity-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Hispanic or Latino</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Hispanic or Latino</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Black or African American</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Asian or Pacific Islander</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Two or more</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-enrollment-btn">Enrollment</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-enrollment-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Domestic</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Domestic</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>International</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-field-row">
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-firstgen-btn">First-generation student</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-firstgen-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Yes</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Yes</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>No</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-field">
+              <label class="contact-field-label" for="profile-pell-btn">Pell Grant recipient</label>
+              <div class="contact-custom-select">
+                <button type="button" class="contact-custom-select-trigger" id="profile-pell-btn" aria-haspopup="listbox" aria-expanded="false">
+                  <span class="contact-custom-select-val">Prefer not to say</span>
+                  <span class="contact-custom-select-caret"></span>
+                </button>
+                <div class="contact-custom-select-panel" role="listbox">
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Yes</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>No</span><span class="contact-custom-opt-arrow">↗</span></div>
+                  <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="contact-submit">Save Profile <span class="btn-arrow">→</span></button>
+        </form>
 
         <div class="contact-side reveal reveal-2">
-          <div class="contact-side-label">Where it goes</div>
-          <h3 class="contact-side-h">Locked <em>down,</em> by design.</h3>
+          <div class="contact-side-label">Why we ask</div>
+          <h3 class="contact-side-h">Counted <em>together,</em> never alone.</h3>
           <p class="contact-side-body">
-            Your file uploads over an encrypted connection and lives in a private,
-            access-controlled bucket. It is never posted publicly and never sent
-            over open links.
+            Sponsors back this chapter because of who we are: first-gen students, Pell
+            recipients, students from every borough and beyond. Your answers make that
+            story visible in aggregate.
           </p>
           <p class="contact-side-body">
-            Only sponsors at the qualifying tier can open the resume book, every
-            download is logged, and access ends when a sponsorship does.
+            Individual answers are never shown to anyone outside the e-board. Sponsors
+            see one dashboard for the whole chapter, with no way to trace a number back
+            to a person.
           </p>
           <div class="portal-note">
-            Removing your file or flipping the toggle off takes effect right away,
-            no questions asked.
+            You can change or clear any answer whenever you want, and "prefer not to
+            say" is always an option.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROFILE -->
+  <!-- RESUME -->
   <section class="section container">
     <div class="section-head-split">
       <div class="reveal">
-        <div class="eyebrow">Your Profile</div>
+        <div class="eyebrow">Resume Book</div>
         <h2 class="display-l" style="margin-top:18px">
-          Tell us <em class="serif-italic">who</em> you are.
+          Your resume, <em class="serif-italic">your</em> call.
         </h2>
       </div>
       <div class="section-head-right reveal reveal-2">
-        These answers roll up into the chapter-wide numbers sponsors see. Never
-        your name, never your file, always the whole familia at once.
+        Upload once, update whenever. You choose whether it appears in the
+        sponsor resume book, and you can pull it at any time.
       </div>
     </div>
 
     <div class="contact-split" style="padding-top:0">
-      <form class="contact-form-card reveal">
-        <h3 class="contact-form-h">About you</h3>
-        <p class="contact-form-note">Every field is optional and editable. Answer what you're comfortable with.</p>
+      <div class="portal-card reveal">
+        <div class="portal-card-h">Upload your resume</div>
+        <p class="portal-card-note">PDF only, up to 5 MB. One file per member, new uploads replace the old one.</p>
 
-        <div class="contact-field-row">
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-hometown">Hometown</label>
-            <input class="contact-field-input" id="profile-hometown" name="hometown" type="text" value="Brentwood, NY">
+        <div class="portal-dropzone">
+          <div class="portal-dropzone-glyph">↑</div>
+          <div class="portal-dropzone-title">Drag your resume here</div>
+          <div class="portal-dropzone-sub">or</div>
+          <a href="#" class="btn btn-outline" style="margin-top:14px">Browse Files</a>
+        </div>
+
+        <div class="portal-file">
+          <div class="portal-file-icon">PDF</div>
+          <div>
+            <div class="portal-file-name">MarisolVega_Resume.pdf</div>
+            <div class="portal-file-meta">Uploaded Jun 30, 2026 · 212 KB</div>
           </div>
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-major-btn">Major</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-major-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Computer Science</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Computer Science</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Mechanical Engineering</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Electrical Engineering</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Applied Math &amp; Statistics</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Other STEM</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
+          <div class="portal-file-actions">
+            <a href="#" class="btn-text">Replace</a>
+            <a href="#" class="btn-text">Remove</a>
           </div>
         </div>
 
-        <div class="contact-field-row">
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-year-btn">Class year</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-year-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Class of 2027</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2030</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2029</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Class of 2028</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Class of 2027</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-level-btn">Level</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-level-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Undergraduate</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Undergraduate</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Graduate</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
+        <div class="portal-toggle">
+          <span class="portal-toggle-switch is-on" role="switch" aria-checked="true" tabindex="0" aria-label="Include my resume in the sponsor resume book"></span>
+          <div>
+            <div class="portal-toggle-label">Include me in the sponsor resume book</div>
+            <div class="portal-toggle-sub">
+              Your resume is visible to qualifying sponsors while this is on. Turn
+              it off and it disappears from the book immediately.
             </div>
           </div>
         </div>
-
-        <div class="contact-field-row">
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-ethnicity-btn">Ethnic background</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-ethnicity-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Hispanic or Latino</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Hispanic or Latino</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Black or African American</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Asian or Pacific Islander</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Two or more</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-enrollment-btn">Enrollment</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-enrollment-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Domestic</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Domestic</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>International</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-field-row">
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-firstgen-btn">First-generation student</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-firstgen-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Yes</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Yes</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>No</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="contact-field">
-            <label class="contact-field-label" for="profile-pell-btn">Pell Grant recipient</label>
-            <div class="contact-custom-select">
-              <button type="button" class="contact-custom-select-trigger" id="profile-pell-btn" aria-haspopup="listbox" aria-expanded="false">
-                <span class="contact-custom-select-val">Prefer not to say</span>
-                <span class="contact-custom-select-caret"></span>
-              </button>
-              <div class="contact-custom-select-panel" role="listbox">
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>Yes</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt" role="option" tabindex="-1"><span>No</span><span class="contact-custom-opt-arrow">↗</span></div>
-                <div class="contact-custom-select-opt is-selected" role="option" tabindex="-1"><span>Prefer not to say</span><span class="contact-custom-opt-arrow">↗</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <button type="button" class="contact-submit">Save Profile <span class="btn-arrow">→</span></button>
-      </form>
+      </div>
 
       <div class="contact-side reveal reveal-2">
-        <div class="contact-side-label">Why we ask</div>
-        <h3 class="contact-side-h">Counted <em>together,</em> never alone.</h3>
+        <div class="contact-side-label">Where it goes</div>
+        <h3 class="contact-side-h">Locked <em>down,</em> by design.</h3>
         <p class="contact-side-body">
-          Sponsors back this chapter because of who we are: first-gen students, Pell
-          recipients, students from every borough and beyond. Your answers make that
-          story visible in aggregate.
+          Your file uploads over an encrypted connection and lives in a private,
+          access-controlled bucket. It is never posted publicly and never sent
+          over open links.
         </p>
         <p class="contact-side-body">
-          Individual answers are never shown to anyone outside the e-board. Sponsors
-          see one dashboard for the whole chapter, with no way to trace a number back
-          to a person.
+          Only sponsors at the qualifying tier can open the resume book, every
+          download is logged, and access ends when a sponsorship does.
         </p>
         <div class="portal-note">
-          You can change or clear any answer whenever you want, and "prefer not to
-          say" is always an option.
+          Removing your file or flipping the toggle off takes effect right away,
+          no questions asked.
         </div>
       </div>
     </div>
