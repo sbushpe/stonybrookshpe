@@ -107,7 +107,10 @@ reinstall. There is no lockfile of the full tree on purpose — see §2.5 and
 
 Slice 1 is the skeleton only. Still to come, each as its own plan and PR: Supabase project
 and SQL migrations, signup/login with httpOnly session cookies, email confirmation, member
-profiles, then sponsor tier gating. The resume book is deliberately further out.
+profiles, then sponsor tier gating. The resume book is deliberately further out. Member profiles are
+where the verified backup email lands, which is what keeps an account alive after the SBU
+address expires - see
+[decisions/002-member-identity-and-alumni-access.md](decisions/002-member-identity-and-alumni-access.md).
 
 `SUPABASE_*` variables appear in `.env.example` as commented lines so the contract is
 visible, but nothing reads them yet.

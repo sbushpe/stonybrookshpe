@@ -127,6 +127,59 @@
       });
     });
 
+    // ── Field checks ──────────────────────────────────────────
+    // UX only. The server is still the one that decides who is a student.
+    // isWrong receives the field's raw value and is only asked about non-empty
+    // input, since an empty field is the required attribute's job.
+    function wireFieldCheck(input, isWrong, message) {
+      const errorEl = document.getElementById(input.getAttribute('aria-describedby'));
+
+      // Tested raw, so this always agrees with any native pattern on the field.
+      // A trimming check here could clear the message while the pattern still
+      // failed, which rejects the field silently.
+      function check() {
+        const wrong = input.value !== '' && isWrong(input.value);
+        input.setCustomValidity(wrong ? message : '');
+        return wrong;
+      }
+
+      function render(wrong) {
+        input.classList.toggle('is-error', wrong);
+        input.setAttribute('aria-invalid', String(wrong));
+        if (errorEl) errorEl.textContent = wrong ? message : '';
+      }
+
+      // Leaving the field tidies stray paste whitespace, so surrounding spaces
+      // never become the user's problem.
+      input.addEventListener('blur', () => {
+        input.value = input.value.trim();
+        render(check());
+      });
+      input.addEventListener('invalid', () => render(check()));
+
+      // Keep validity current as they type, but only clear a shown error —
+      // flagging a half-typed value mid-keystroke reads as nagging.
+      input.addEventListener('input', () => {
+        if (!check()) render(false);
+      });
+    }
+
+    const SBU_EMAIL_DOMAIN = '@stonybrook.edu';
+    const SBU_EMAIL_MESSAGE = 'Use your Stony Brook email, ending in @stonybrook.edu.';
+    document.querySelectorAll('input[data-sbu-email]').forEach((input) => {
+      wireFieldCheck(
+        input,
+        (value) => !value.toLowerCase().endsWith(SBU_EMAIL_DOMAIN),
+        SBU_EMAIL_MESSAGE
+      );
+    });
+
+    const STUDENT_ID_PATTERN = /^\d{9}$/;
+    const STUDENT_ID_MESSAGE = 'Your student ID is 9 digits, numbers only.';
+    document.querySelectorAll('input[data-student-id]').forEach((input) => {
+      wireFieldCheck(input, (value) => !STUDENT_ID_PATTERN.test(value), STUDENT_ID_MESSAGE);
+    });
+
     // ── Auth forms: required fields validate, nothing is sent yet ──
     document.querySelectorAll('.auth-panel').forEach((form) => {
       const status = form.querySelector('.auth-status');

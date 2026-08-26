@@ -235,6 +235,25 @@ on focus, no boxes), custom animated select (`.contact-custom-select` with `.is-
 and a full-width orange pill submit. New form controls extend this family in
 `shpe-design.css` + `shpe.js` — never drop in a native-styled or third-party widget.
 
+**Field errors:** an empty `<p class="contact-field-error" role="alert">` sits directly under
+the input, `aria-describedby`-linked to it, and JS fills it with the message while toggling
+`.is-error` on the input and `aria-invalid` on the field. The message and the input's
+underline both use `--shpe-orange-300`, not `--shpe-red` — reserved red on navy falls to
+roughly 2:1 contrast, while the on-dark orange is the documented token for text on navy (§2).
+The rule sits after the `:focus` declaration so an errored field keeps the error colour while
+focused. `.contact-field-error:empty` collapses, so the field spacing is unchanged at rest.
+Constrained fields are declared in the markup and wired by `shpe.js`'s `wireFieldCheck`
+helper, which takes the input, a predicate, and the message: `data-sbu-email` for the SBU
+domain, `data-student-id` for the 9-digit ID. It calls `setCustomValidity()`, so a bad value
+actually blocks submission rather than only looking like it does, and the custom message
+replaces the unhelpful native "Please match the requested format." Empty fields stay with
+the native `required` message. Give a field a native `pattern` too wherever the rule can be
+expressed as one, so it still holds if JS never loads. **Client-side validation is UX, never the
+gate** — engineering-rules §0.4 still puts the real check on the server. The `@stonybrook.edu` match is
+deliberately exact and rejects `@alumni.stonybrook.edu`; alumni access is solved with a
+backup email on the profile, not by loosening this pattern, per
+[decisions/002-member-identity-and-alumni-access.md](decisions/002-member-identity-and-alumni-access.md).
+
 ---
 
 ## 6. Motion

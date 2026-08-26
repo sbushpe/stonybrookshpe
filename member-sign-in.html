@@ -68,15 +68,16 @@
             role="tabpanel" aria-labelledby="member-signin-tab">
         <h2 class="contact-form-h">Sign in</h2>
         <p class="contact-form-note">
-          We email you a one-time link. There is no password to remember, and no
-          password for us to lose.
+          We email you a one-time link to your inbox to confirm you're a student
         </p>
 
         <div class="contact-field">
           <label class="contact-field-label" for="member-signin-email">SBU email *</label>
           <input class="contact-field-input" id="member-signin-email" name="email"
-                 type="email" autocomplete="email"
-                 placeholder="firstname.lastname@stonybrook.edu" required>
+                 type="email" autocomplete="email" data-sbu-email
+                 aria-describedby="member-signin-email-error"
+                 placeholder="first.last@stonybrook.edu" required>
+          <p class="contact-field-error" id="member-signin-email-error" role="alert"></p>
         </div>
 
         <button type="submit" class="contact-submit">
@@ -99,23 +100,35 @@
           chapter roster before the account goes live.
         </p>
 
-        <div class="contact-field">
-          <label class="contact-field-label" for="member-signup-name">Full name *</label>
-          <input class="contact-field-input" id="member-signup-name" name="name"
-                 type="text" autocomplete="name" placeholder="Marisol Vega" required>
+        <div class="contact-field-row">
+          <div class="contact-field">
+            <label class="contact-field-label" for="member-signup-first-name">First name *</label>
+            <input class="contact-field-input" id="member-signup-first-name" name="firstName"
+                   type="text" autocomplete="given-name" placeholder="first" required>
+          </div>
+          <div class="contact-field">
+            <label class="contact-field-label" for="member-signup-last-name">Last name *</label>
+            <input class="contact-field-input" id="member-signup-last-name" name="lastName"
+                   type="text" autocomplete="family-name" placeholder="last" required>
+          </div>
         </div>
 
         <div class="contact-field-row">
           <div class="contact-field">
             <label class="contact-field-label" for="member-signup-email">SBU email *</label>
             <input class="contact-field-input" id="member-signup-email" name="email"
-                   type="email" autocomplete="email"
-                   placeholder="firstname.lastname@stonybrook.edu" required>
+                   type="email" autocomplete="email" data-sbu-email
+                   aria-describedby="member-signup-email-error"
+                   placeholder="first.last@stonybrook.edu" required>
+            <p class="contact-field-error" id="member-signup-email-error" role="alert"></p>
           </div>
           <div class="contact-field">
             <label class="contact-field-label" for="member-signup-id">Student ID *</label>
             <input class="contact-field-input" id="member-signup-id" name="studentId"
-                   type="text" inputmode="numeric" placeholder="1150XXXXX" required>
+                   type="text" inputmode="numeric" pattern="\d{9}" maxlength="9"
+                   data-student-id aria-describedby="member-signup-id-error"
+                   placeholder="123456789" required>
+            <p class="contact-field-error" id="member-signup-id-error" role="alert"></p>
           </div>
         </div>
 
@@ -125,7 +138,7 @@
         <p class="auth-status" role="status" aria-live="polite"></p>
 
         <div class="portal-note on-dark" style="margin-top:24px">
-          Those three fields are everything we store to get you in. Major, class
+          Those four fields are everything we store to get you in. Major, class
           year, and a resume are optional, and you add them later from the portal.
         </div>
       </form>
@@ -143,7 +156,6 @@
         <li>Check into meetings in about thirty seconds</li>
         <li>A running attendance total that updates itself</li>
         <li>Your resume in the sponsor book, only if you say so</li>
-        <li>Event RSVPs and workshop sign-ups in one list</li>
       </ul>
 
       <div class="portal-note" style="margin-top:32px">
@@ -158,14 +170,11 @@
     <div class="container">
       <div class="section-head-split">
         <div class="reveal">
-          <div class="eyebrow">No Passwords</div>
           <h2 class="display-l" style="margin-top:18px">
             How you get <em class="serif-italic">in.</em>
           </h2>
         </div>
         <div class="section-head-right reveal reveal-2">
-          A password we never store is a password nobody can steal from us. Your
-          SBU inbox is already the proof that you are a student here.
         </div>
       </div>
 

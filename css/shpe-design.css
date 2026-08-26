@@ -1201,6 +1201,15 @@ h1, h2, h3, h4 {
 .contact-field-input:focus,
 .contact-field-textarea:focus,
 .contact-field-select:focus { border-color: var(--shpe-orange); }
+.contact-field-input.is-error,
+.contact-field-textarea.is-error { border-color: var(--shpe-orange-300); }
+.contact-field-error {
+  font: 400 13px 'Inter';
+  line-height: 1.5;
+  color: var(--shpe-orange-300);
+  margin: 8px 0 0;
+}
+.contact-field-error:empty { display: none; }
 .contact-field-textarea { min-height: 235px; resize: vertical; font-family: inherit; }
 .contact-field-select { color-scheme: dark; cursor: pointer; }
 .contact-field-select option { background: var(--shpe-navy); color: #fff; }
